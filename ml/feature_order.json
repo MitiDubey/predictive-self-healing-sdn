@@ -1,0 +1,6 @@
+[
+  "packet_count",
+  "byte_count",
+  "traffic_rate",
+  "switch_id"
+]

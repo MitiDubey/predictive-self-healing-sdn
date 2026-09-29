@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "model": "random_forest",
+      "accuracy": 1.0,
+      "precision_high": 1.0,
+      "recall_high": 1.0,
+      "f1_high": 1.0
+    },
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.96875,
+      "precision_high": 1.0,
+      "recall_high": 0.8333333333333334,
+      "f1_high": 0.9090909090909091
+    },
+    {
+      "model": "decision_tree",
+      "accuracy": 1.0,
+      "precision_high": 1.0,
+      "recall_high": 1.0,
+      "f1_high": 1.0
+    }
+  ],
+  "selected": {
+    "model": "random_forest",
+    "accuracy": 1.0,
+    "precision_high": 1.0,
+    "recall_high": 1.0,
+    "f1_high": 1.0
+  }
+}
