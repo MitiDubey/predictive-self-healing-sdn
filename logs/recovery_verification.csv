@@ -1,0 +1,2 @@
+verification_timestamp,source_recovery_timestamp,connectivity_verified,recovery_time_ms,packet_loss_packets
+1793382034.649,1793381977.328,true,57321.155,0

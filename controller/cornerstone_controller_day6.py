@@ -10,6 +10,7 @@ from os_ken.controller.handler import (
 )
 from os_ken.ofproto import ofproto_v1_3
 from os_ken.lib.packet import packet, ethernet
+from os_ken.lib.packet import ipv4, tcp, udp
 from os_ken.lib import hub
 
 
@@ -111,10 +112,43 @@ class CornerstoneController(app_manager.OSKenApp):
 
         if out_port != ofproto.OFPP_FLOOD:
 
-            match = parser.OFPMatch(
-                in_port=in_port,
-                eth_dst=dst
-            )
+            # Begin with a more specific Layer-2 match
+            match_fields = {
+                "in_port": in_port,
+                "eth_src": src,
+                "eth_dst": dst,
+                "eth_type": eth.ethertype,
+            }
+
+            # Add IPv4 information when available
+            ip_pkt = pkt.get_protocol(ipv4.ipv4)
+
+            if ip_pkt is not None:
+                match_fields.update({
+                    "ipv4_src": ip_pkt.src,
+                    "ipv4_dst": ip_pkt.dst,
+                    "ip_proto": ip_pkt.proto,
+                })
+
+                # Distinguish individual TCP flows
+                tcp_pkt = pkt.get_protocol(tcp.tcp)
+
+                if tcp_pkt is not None:
+                    match_fields.update({
+                        "tcp_src": tcp_pkt.src_port,
+                        "tcp_dst": tcp_pkt.dst_port,
+                    })
+
+                # Distinguish individual UDP flows
+                udp_pkt = pkt.get_protocol(udp.udp)
+
+                if udp_pkt is not None:
+                    match_fields.update({
+                        "udp_src": udp_pkt.src_port,
+                        "udp_dst": udp_pkt.dst_port,
+                    })
+
+            match = parser.OFPMatch(**match_fields)
 
             instructions = [
                 parser.OFPInstructionActions(
@@ -159,6 +193,10 @@ class CornerstoneController(app_manager.OSKenApp):
         elif ev.state == DEAD_DISPATCHER:
             self.datapaths.pop(datapath.id, None)
             print(f"Removed switch: {datapath.id}")
+
+        on_datapaths_changed = getattr(self, "_on_datapaths_changed", None)
+        if on_datapaths_changed is not None:
+            on_datapaths_changed()
 
     def _monitor(self):
 

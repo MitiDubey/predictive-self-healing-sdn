@@ -1,0 +1,3 @@
+timestamp,failed_link,affected_flow,before_path,alternate_path,recovery_time_ms,packet_loss_packets,final_flow_rules,status
+1793365674.619,1-2,h1-h4,1->2->4,1->3->4,0.213,,2,pending_switch_connection
+1793365753.341,1-2,h1-h4,1->2->4,1->3->4,0.264,,2,pending_switch_connection

@@ -1,0 +1,24 @@
+{
+  "dataset_samples": 160,
+  "class_distribution": {
+    "normal": 130,
+    "high": 30
+  },
+  "model_metrics": {
+    "accuracy": 1.0,
+    "precision_high": 1.0,
+    "recall_high": 1.0,
+    "f1_high": 1.0
+  },
+  "recovery": {
+    "source_available": true,
+    "measured_runs": 2
+  },
+  "artifacts": [
+    "results/dataset_summary.csv",
+    "results/confusion_matrix.csv",
+    "results/plots/confusion_matrix.png",
+    "results/recovery_time.csv",
+    "results/plots/recovery_time.png"
+  ]
+}

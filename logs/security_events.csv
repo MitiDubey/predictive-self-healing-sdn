@@ -1,0 +1,799 @@
+timestamp,switch_id,packet_count,byte_count,traffic_rate,prediction,confidence,action,reasons1792936837.666,2,21,1794,358.75,normal,1.0,allow,Normal traffic predicted
+1792936837.698,1,22,1884,372.36,normal,1.0,allow,Normal traffic predicted
+1792936845.171,1,27,2254,49.57,normal,1.0,allow,Normal traffic predicted
+1792936845.205,2,26,2164,48.92,normal,1.0,allow,Normal traffic predicted
+1792936855.16,1,31,2534,56.0,normal,1.0,allow,Normal traffic predicted
+1792936855.187,2,30,2444,55.65,normal,1.0,allow,Normal traffic predicted
+1792936870.169,1,35,2814,56.02,normal,1.0,allow,Normal traffic predicted
+1792936870.203,2,34,2724,55.61,normal,1.0,allow,Normal traffic predicted
+1792936888.031,1,38,2972,31.6,normal,1.0,allow,Normal traffic predicted
+1792936888.088,2,37,2882,31.28,normal,1.0,allow,Normal traffic predicted
+1792936893.047,2,515339,34012826,4740227.3,high,1.0,monitor,High-risk confirmation 1/3
+1792936893.084,2,1202077,53511647238,7436984521.83,high,1.0,monitor,High-risk confirmation 1/3
+1792936893.124,1,515339,34012826,4597237.93,high,1.0,monitor,High-risk confirmation 1/3
+1792936893.166,1,1202077,53511647238,7252580879.17,high,1.0,monitor,High-risk confirmation 1/3
+1792936898.058,2,754452,49795128,3155458.76,high,1.0,monitor,High-risk confirmation 2/3
+1792936898.114,2,1767916,78664577084,5020069960.18,high,1.0,monitor,High-risk confirmation 2/3
+1792936898.175,1,754452,49795128,3137959.15,high,1.0,monitor,High-risk confirmation 2/3
+1792936898.228,1,1767917,78664642310,4979509906.46,high,1.0,monitor,High-risk confirmation 2/3
+1792936903.033,1,993840,65595776,3245141.82,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936903.097,1,2337499,104030873034,5221107294.31,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936903.164,1,42,3252,57.51,normal,1.0,allow,Normal traffic predicted
+1792936903.222,2,993840,65595776,3049595.66,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936903.301,2,2337499,104030873034,4911851339.37,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936903.372,2,41,3162,53.98,normal,1.0,allow,Normal traffic predicted
+1792936908.037,1,1217511,80358330,2952313.43,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936908.089,1,2881899,128143616010,4819538957.26,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936908.152,2,1217511,80358330,2997639.95,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936908.203,2,2881898,128143550784,4890468255.33,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936915.504,1,1454310,95988076,2093252.77,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936915.561,1,3436429,152916517158,3317538864.61,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936915.634,2,1454310,95988076,2091677.95,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936915.703,2,3436429,152916517158,3311056455.08,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936920.481,1,1475805,97406906,283674.95,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936920.543,1,3483240,154984777276,415579224.22,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936920.584,2,1475805,97406906,284803.22,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936920.622,2,3483240,154984777276,417836883.68,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792936925.488,1,1475810,97407396,98.0,normal,0.62,allow,Normal traffic predicted
+1792936925.593,1,3483245,154984777766,97.87,normal,0.62,allow,Normal traffic predicted
+1792936925.624,2,1475810,97407396,97.02,normal,0.605,allow,Normal traffic predicted
+1792936925.655,2,3483245,154984777766,97.23,normal,0.605,allow,Normal traffic predicted
+1792937935.27,1,1475815,97407830,56.14,normal,0.62,allow,Normal traffic predicted
+1792937935.307,1,3483247,154984777962,25.22,normal,0.62,allow,Normal traffic predicted
+1792937935.368,1,61,4526,100.42,normal,1.0,allow,Normal traffic predicted
+1792937935.399,2,1475812,97407592,24.91,normal,0.605,allow,Normal traffic predicted
+1792937935.43,2,3483249,154984778158,49.62,normal,0.605,allow,Normal traffic predicted
+1792937935.464,2,58,4156,72.38,normal,1.0,allow,Normal traffic predicted
+1792937940.267,1,1475818,97407956,25.2,normal,0.62,allow,Normal traffic predicted
+1792937940.292,1,3483249,154984778046,16.81,normal,0.62,allow,Normal traffic predicted
+1792937940.318,1,3,238,8.42,normal,1.0,allow,Normal traffic predicted
+1792937940.343,1,2,140,8.38,normal,1.0,allow,Normal traffic predicted
+1792937940.373,1,7,518,16.68,normal,1.0,allow,Normal traffic predicted
+1792937940.399,1,2,140,8.29,normal,1.0,allow,Normal traffic predicted
+1792937940.429,1,2,140,8.25,normal,1.0,allow,Normal traffic predicted
+1792937940.46,1,62,4568,8.2,normal,1.0,allow,Normal traffic predicted
+1792937940.486,2,1475814,97407676,16.5,normal,0.605,allow,Normal traffic predicted
+1792937940.514,2,3483252,154984778284,24.77,normal,0.605,allow,Normal traffic predicted
+1792937940.541,2,3,238,8.26,normal,1.0,allow,Normal traffic predicted
+1792937940.568,2,5,378,16.44,normal,1.0,allow,Normal traffic predicted
+1792937940.601,2,3,238,8.17,normal,1.0,allow,Normal traffic predicted
+1792937940.629,2,3,238,8.12,normal,1.0,allow,Normal traffic predicted
+1792937940.658,2,3,238,8.08,normal,1.0,allow,Normal traffic predicted
+1792937940.69,2,2,140,8.03,normal,1.0,allow,Normal traffic predicted
+1792937950.273,1,1775329,117176234,3953963.67,high,1.0,monitor,High-risk confirmation 1/3
+1792937950.323,1,4220353,188219373130,6591685201.35,high,1.0,monitor,High-risk confirmation 1/3
+1792937950.368,1,63,4638,13.75,normal,1.0,allow,Normal traffic predicted
+1792937950.414,2,1775326,117176020,3847696.93,high,1.0,monitor,High-risk confirmation 1/3
+1792937950.458,2,4220355,188219372550,6412411015.73,high,1.0,monitor,High-risk confirmation 1/3
+1792937950.495,2,59,4226,13.39,normal,1.0,allow,Normal traffic predicted
+1792937955.281,2,2132668,140760640,4849312.43,high,1.0,monitor,High-risk confirmation 2/3
+1792937955.332,2,5095456,227146139160,7996889072.96,high,1.0,monitor,High-risk confirmation 2/3
+1792937955.38,1,2132671,140760854,4623616.39,high,1.0,monitor,High-risk confirmation 2/3
+1792937955.419,1,5095453,227146138922,7621905838.53,high,1.0,monitor,High-risk confirmation 2/3
+1792937960.298,2,2446082,161446048,4136188.75,high,1.0,mitigate,Repeated high-risk predictions confirmed
+1792937960.343,2,5791535,257818757862,6114167690.75,high,1.0,mitigate,Repeated high-risk predictions confirmed
+1792937960.397,1,2446086,161446328,4127664.25,high,1.0,mitigate,Repeated high-risk predictions confirmed
+1792937960.442,1,5791532,257818757624,6114569587.65,high,1.0,mitigate,Repeated high-risk predictions confirmed
+1792937967.981,1,2454652,162011684,74281.24,normal,0.62,allow,Normal traffic predicted
+1792937968.017,1,5811617,258702422650,116509173.03,high,1.0,already_mitigated,Flow was already mitigated
+1792937968.048,1,64,4708,9.24,normal,1.0,allow,Normal traffic predicted
+1792937968.086,2,5811579,258700361070,113749279.26,high,1.0,already_mitigated,Flow was already mitigated
+1792937968.121,2,60,4296,9.04,normal,1.0,allow,Normal traffic predicted
+1792937972.988,1,5,7570,306.63,normal,1.0,allow,Normal traffic predicted
+1792937977.984,1,6,9084,302.74,normal,1.0,allow,Normal traffic predicted
+1792937992.989,1,7,10598,302.69,normal,1.0,allow,Normal traffic predicted
+1792937997.986,1,10,10724,25.21,normal,1.0,allow,Normal traffic predicted
+1792938005.653,1,65,4778,9.17,normal,1.0,allow,Normal traffic predicted
+1792938005.69,2,61,4366,9.13,normal,1.0,allow,Normal traffic predicted
+1792938278.989,2,4,336,19.59,normal,1.0,allow,Normal traffic predicted
+1792938279.02,2,6,476,19.35,normal,1.0,allow,Normal traffic predicted
+1792938279.046,1,4,336,19.24,normal,1.0,allow,Normal traffic predicted
+1792938279.077,1,3,238,19.14,normal,1.0,allow,Normal traffic predicted
+1792938279.105,1,3,238,19.02,normal,1.0,allow,Normal traffic predicted
+1792938279.131,1,1,98,18.92,normal,1.0,allow,Normal traffic predicted
+1792938286.722,1,6,420,10.96,normal,1.0,allow,Normal traffic predicted
+1792938286.766,1,5,322,10.94,normal,1.0,allow,Normal traffic predicted
+1792938286.794,1,5,322,10.92,normal,1.0,allow,Normal traffic predicted
+1792938286.835,1,5,266,21.85,normal,1.0,allow,Normal traffic predicted
+1792938286.867,2,8,504,21.24,normal,1.0,allow,Normal traffic predicted
+1792938286.902,2,8,560,10.66,normal,1.0,allow,Normal traffic predicted
+1792938291.713,1,6,364,8.54,normal,1.0,allow,Normal traffic predicted
+1792938291.74,1,7,350,17.08,normal,1.0,allow,Normal traffic predicted
+1792938291.765,1,73,5114,17.12,normal,1.0,allow,Normal traffic predicted
+1792938291.792,2,10,588,17.04,normal,1.0,allow,Normal traffic predicted
+1792938291.819,2,9,602,8.53,normal,1.0,allow,Normal traffic predicted
+1792938291.845,2,8580,566208,17.09,normal,1.0,allow,Normal traffic predicted
+1792938291.871,2,64,4492,17.0,normal,1.0,allow,Normal traffic predicted
+1792938296.717,1,7,518,19.59,normal,1.0,allow,Normal traffic predicted
+1792938296.748,1,6,420,19.47,normal,1.0,allow,Normal traffic predicted
+1792938296.781,1,8,616,19.36,normal,1.0,allow,Normal traffic predicted
+1792938296.823,1,3,238,19.23,normal,1.0,allow,Normal traffic predicted
+1792938296.867,1,75,5254,27.55,normal,1.0,allow,Normal traffic predicted
+1792938296.902,2,10,700,19.31,normal,1.0,allow,Normal traffic predicted
+1792938296.939,2,4,336,19.28,normal,1.0,allow,Normal traffic predicted
+1792938296.97,2,8581,566250,8.2,normal,1.0,allow,Normal traffic predicted
+1792938297.008,2,42,2061916,19.12,normal,0.88,allow,Normal traffic predicted
+1792938297.047,2,65,4534,8.13,normal,1.0,allow,Normal traffic predicted
+1792938301.731,1,10,700,17.01,normal,1.0,allow,Normal traffic predicted
+1792938301.765,1,5,322,16.97,normal,1.0,allow,Normal traffic predicted
+1792938301.796,1,78,5380,25.5,normal,1.0,allow,Normal traffic predicted
+1792938301.832,2,12,784,17.04,normal,1.0,allow,Normal traffic predicted
+1792938301.876,2,6,420,17.04,normal,1.0,allow,Normal traffic predicted
+1792938301.908,2,45,2062042,25.68,normal,0.88,allow,Normal traffic predicted
+1792938306.716,1,8,448,19.91,normal,1.0,allow,Normal traffic predicted
+1792938306.746,2,11,686,19.92,normal,1.0,allow,Normal traffic predicted
+1792938311.718,2,14,812,25.34,normal,1.0,allow,Normal traffic predicted
+1792938311.745,1,11,574,25.05,normal,1.0,allow,Normal traffic predicted
+1792938319.503,1,11,798,12.64,normal,1.0,allow,Normal traffic predicted
+1792938319.53,1,6,420,12.59,normal,1.0,allow,Normal traffic predicted
+1792938319.559,2,13,882,12.54,normal,1.0,allow,Normal traffic predicted
+1792938319.588,2,7,518,12.5,normal,1.0,allow,Normal traffic predicted
+1792938319.615,2,4,336,12.45,normal,1.0,allow,Normal traffic predicted
+1792938319.642,2,3,238,12.41,normal,1.0,allow,Normal traffic predicted
+1792938319.668,2,8582,566348,12.37,normal,1.0,allow,Normal traffic predicted
+1792938324.504,2,6,420,17.2,normal,1.0,allow,Normal traffic predicted
+1792938324.532,2,5,322,17.18,normal,1.0,allow,Normal traffic predicted
+1792938324.556,2,8585,566474,25.77,normal,1.0,allow,Normal traffic predicted
+1792938329.504,1,13,938,28.49,normal,1.0,allow,Normal traffic predicted
+1792938329.538,1,80,5520,28.29,normal,1.0,allow,Normal traffic predicted
+1792938329.57,2,5,378,27.64,normal,1.0,allow,Normal traffic predicted
+1792938329.602,2,46,2062140,19.54,normal,0.88,allow,Normal traffic predicted
+1792938329.634,2,66,4576,8.32,normal,1.0,allow,Normal traffic predicted
+1792938334.507,1,16,1064,25.19,normal,1.0,allow,Normal traffic predicted
+1792938334.557,1,83,5646,25.18,normal,1.0,allow,Normal traffic predicted
+1792938334.587,2,8,504,25.1,normal,1.0,allow,Normal traffic predicted
+1792938334.617,2,49,2062266,25.11,normal,0.88,allow,Normal traffic predicted
+1792938339.502,2,7,518,20.06,normal,1.0,allow,Normal traffic predicted
+1792938339.537,2,6,420,19.94,normal,1.0,allow,Normal traffic predicted
+1792938579.478,1,8,616,19.59,normal,1.0,allow,Normal traffic predicted
+1792938579.541,1,7,518,19.34,normal,1.0,allow,Normal traffic predicted
+1792938579.609,1,14,700,24.56,normal,1.0,allow,Normal traffic predicted
+1792938579.664,1,87,5814,32.32,normal,1.0,allow,Normal traffic predicted
+1792938579.738,2,17,938,23.98,normal,1.0,allow,Normal traffic predicted
+1792938579.797,2,8586,566516,7.88,normal,1.0,allow,Normal traffic predicted
+1792938579.863,2,70,4744,31.19,normal,1.0,allow,Normal traffic predicted
+1792938584.477,1,11,798,36.39,normal,1.0,allow,Normal traffic predicted
+1792938584.545,1,10,700,36.4,normal,1.0,allow,Normal traffic predicted
+1792938584.615,1,17,1162,19.59,normal,1.0,allow,Normal traffic predicted
+1792938584.677,1,7,518,19.31,normal,1.0,allow,Normal traffic predicted
+1792938584.74,1,90,5996,35.92,normal,1.0,allow,Normal traffic predicted
+1792938584.797,2,14,980,19.59,normal,1.0,allow,Normal traffic predicted
+1792938584.87,2,8,616,19.37,normal,1.0,allow,Normal traffic predicted
+1792938584.931,2,8588,566600,16.37,normal,1.0,allow,Normal traffic predicted
+1792938584.995,2,50,2062364,19.09,normal,0.88,allow,Normal traffic predicted
+1792938585.064,2,72,4828,16.16,normal,1.0,allow,Normal traffic predicted
+1792938589.487,1,19,1246,17.24,normal,1.0,allow,Normal traffic predicted
+1792938589.553,1,9,602,17.24,normal,1.0,allow,Normal traffic predicted
+1792938589.627,1,93,6122,25.84,normal,1.0,allow,Normal traffic predicted
+1792938589.694,2,16,1064,17.19,normal,1.0,allow,Normal traffic predicted
+1792938589.756,2,10,700,17.15,normal,1.0,allow,Normal traffic predicted
+1792938589.816,2,53,2062490,26.12,normal,0.88,allow,Normal traffic predicted
+1792938594.485,2,18,1036,20.46,normal,1.0,allow,Normal traffic predicted
+1792938594.555,1,15,798,19.87,normal,1.0,allow,Normal traffic predicted
+1792938602.204,1,18,924,16.48,normal,1.0,allow,Normal traffic predicted
+1792938602.263,2,21,1162,16.18,normal,1.0,allow,Normal traffic predicted
+1792938607.206,1,20,1344,19.6,normal,1.0,allow,Normal traffic predicted
+1792938607.285,1,10,700,19.31,normal,1.0,allow,Normal traffic predicted
+1792938607.412,2,17,1162,19.52,normal,1.0,allow,Normal traffic predicted
+1792938607.634,2,11,798,19.03,normal,1.0,allow,Normal traffic predicted
+1792938607.708,2,8,616,18.25,normal,1.0,allow,Normal traffic predicted
+1792938607.742,2,7,518,18.0,normal,1.0,allow,Normal traffic predicted
+1792938607.782,2,8589,566698,17.89,normal,1.0,allow,Normal traffic predicted
+1792938612.207,2,10,700,18.66,normal,1.0,allow,Normal traffic predicted
+1792938612.28,2,9,602,18.67,normal,1.0,allow,Normal traffic predicted
+1792938612.344,2,8592,566824,27.77,normal,1.0,allow,Normal traffic predicted
+1792938617.215,1,97,6290,33.62,normal,1.0,allow,Normal traffic predicted
+1792938617.401,2,56,2062616,25.86,normal,0.88,allow,Normal traffic predicted
+1792938617.474,2,75,4954,24.92,normal,1.0,allow,Normal traffic predicted
+1792938891.803,1,13,994,39.19,normal,1.0,allow,Normal traffic predicted
+1792938891.877,1,12,896,38.48,normal,1.0,allow,Normal traffic predicted
+1792938891.947,1,24,1736,75.88,normal,1.0,allow,Normal traffic predicted
+1792938892.013,1,12,896,37.43,normal,1.0,allow,Normal traffic predicted
+1792938892.079,1,8,560,36.96,normal,1.0,allow,Normal traffic predicted
+1792938892.145,1,5,322,44.33,normal,1.0,allow,Normal traffic predicted
+1792938892.213,1,101,6514,41.22,normal,1.0,allow,Normal traffic predicted
+1792938892.273,2,5811584,258700361504,78.89,normal,0.605,allow,Normal traffic predicted
+1792938892.341,2,24,1400,42.8,normal,1.0,allow,Normal traffic predicted
+1792938892.401,2,21,1554,69.64,normal,1.0,allow,Normal traffic predicted
+1792938892.469,2,13,994,34.45,normal,1.0,allow,Normal traffic predicted
+1792938892.531,2,10,700,34.04,normal,1.0,allow,Normal traffic predicted
+1792938892.598,2,13,994,33.68,normal,1.0,allow,Normal traffic predicted
+1792938892.655,2,12,896,33.3,normal,1.0,allow,Normal traffic predicted
+1792938892.726,2,78,5136,30.62,normal,1.0,allow,Normal traffic predicted
+1792938896.8,1,15,1078,16.8,normal,1.0,allow,Normal traffic predicted
+1792938896.864,1,14,980,16.81,normal,1.0,allow,Normal traffic predicted
+1792938896.958,1,27,1862,25.26,normal,1.0,allow,Normal traffic predicted
+1792938897.038,1,14,980,16.76,normal,1.0,allow,Normal traffic predicted
+1792938897.1,1,9,602,8.36,normal,1.0,allow,Normal traffic predicted
+1792938897.201,1,6,364,8.36,normal,1.0,allow,Normal traffic predicted
+1792938897.256,1,7,518,24.92,normal,1.0,allow,Normal traffic predicted
+1792938897.323,1,3,182,16.43,normal,1.0,allow,Normal traffic predicted
+1792938897.387,2,5811587,258700361630,24.66,normal,0.605,allow,Normal traffic predicted
+1792938897.442,2,25,1442,8.21,normal,1.0,allow,Normal traffic predicted
+1792938897.512,2,24,1680,24.7,normal,1.0,allow,Normal traffic predicted
+1792938897.572,2,15,1078,16.44,normal,1.0,allow,Normal traffic predicted
+1792938897.629,2,11,742,8.23,normal,1.0,allow,Normal traffic predicted
+1792938897.687,2,15,1078,16.47,normal,1.0,allow,Normal traffic predicted
+1792938897.754,2,14,980,16.51,normal,1.0,allow,Normal traffic predicted
+1792938897.831,2,3,182,16.47,normal,1.0,allow,Normal traffic predicted
+1792939158.032,2,6211279,276614202426,3583659651.68,high,1.0,monitor,High-risk confirmation 1/3
+1792939158.107,2,166526,10990808,2149627.4,high,1.0,monitor,High-risk confirmation 1/3
+1792939158.186,1,166530,10991144,2118263.17,high,1.0,monitor,High-risk confirmation 1/3
+1792939158.249,1,399695,17913840978,3401057184.73,high,1.0,monitor,High-risk confirmation 1/3
+1792939165.607,1,374712,24731808,1852821.97,high,1.0,monitor,High-risk confirmation 2/3
+1792939165.689,1,879181,39305501838,2882655613.05,high,1.0,monitor,High-risk confirmation 2/3
+1792939165.754,2,6690765,298005863286,2752480127.94,high,1.0,monitor,High-risk confirmation 2/3
+1792939165.818,2,374708,24731472,1779274.96,high,1.0,monitor,High-risk confirmation 2/3
+1792939170.595,1,574509,37918602,2637866.08,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939170.661,1,1350253,60178112966,4184020080.78,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939170.728,2,7161837,318878474414,4197892805.26,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939170.782,2,574505,37918266,2651418.01,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939175.598,1,695448,45900636,1595671.49,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939175.675,1,1631676,72647790260,2492424662.14,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939175.76,2,7443260,331348151708,2487379547.87,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1792939175.833,2,695444,45900300,1586244.6,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793270995.905,1,2,140,28.0,normal,1.0,allow,Normal traffic predicted
+1793270995.933,2,2,140,27.61,normal,1.0,allow,Normal traffic predicted
+1793271000.868,1,23,1582,288.38,normal,1.0,allow,Normal traffic predicted
+1793271000.903,2,23,1582,290.66,normal,1.0,allow,Normal traffic predicted
+1793271005.874,1,1,42,8.4,normal,1.0,allow,Normal traffic predicted
+1793271005.913,1,1,42,8.34,normal,1.0,allow,Normal traffic predicted
+1793271005.949,1,1,42,8.27,normal,1.0,allow,Normal traffic predicted
+1793271005.98,1,1,42,8.22,normal,1.0,allow,Normal traffic predicted
+1793271006.01,1,1,42,8.17,normal,1.0,allow,Normal traffic predicted
+1793271006.037,1,30,1932,67.66,normal,1.0,allow,Normal traffic predicted
+1793271006.067,2,1,42,8.13,normal,1.0,allow,Normal traffic predicted
+1793271006.098,2,1,42,8.08,normal,1.0,allow,Normal traffic predicted
+1793271006.129,2,1,42,8.03,normal,1.0,allow,Normal traffic predicted
+1793271006.16,2,1,42,7.98,normal,1.0,allow,Normal traffic predicted
+1793271006.189,2,1,42,7.94,normal,1.0,allow,Normal traffic predicted
+1793271006.216,2,30,1932,65.78,normal,1.0,allow,Normal traffic predicted
+1793272222.788,1,38,2500,18.66,normal,1.0,allow,Normal traffic predicted
+1793272222.83,2,38,2500,18.51,normal,1.0,allow,Normal traffic predicted
+1793272227.822,1,276923,18277562,2558149.82,high,1.0,monitor,High-risk confirmation 1/3
+1793272227.912,1,636360,28309724652,3816248263.44,high,1.0,monitor,High-risk confirmation 1/3
+1793272227.997,2,276923,18277562,2497460.15,high,1.0,monitor,High-risk confirmation 1/3
+1793272228.094,2,636364,28309724916,3732674558.21,high,1.0,monitor,High-risk confirmation 1/3
+1793272232.791,2,430111,28389230,2099547.19,high,1.0,monitor,High-risk confirmation 2/3
+1793272232.855,2,998853,44509418926,3379068678.15,high,1.0,monitor,High-risk confirmation 2/3
+1793272232.944,1,430111,28389230,1962143.12,high,1.0,monitor,High-risk confirmation 2/3
+1793272233.028,1,998849,44509418662,3162427692.5,high,1.0,monitor,High-risk confirmation 2/3
+1793272237.824,1,595726,39321320,2255898.29,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272237.887,1,1388398,61946815424,3573506521.75,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272237.955,2,595727,39321386,2119484.79,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272238.027,2,1388402,61946815688,3376678545.35,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272242.761,1,727211,47999414,1735755.12,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272242.798,1,1702210,75890193680,2824110347.98,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272242.832,2,727211,47999414,1766762.99,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272242.867,2,1702214,75890193944,2859132829.7,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272520.19,2,41,2714,42.79,normal,1.0,allow,Normal traffic predicted
+1793272520.236,1,40,2648,29.3,normal,1.0,allow,Normal traffic predicted
+1793272525.203,2,4,168,8.4,normal,1.0,allow,Normal traffic predicted
+1793272525.272,2,3,126,8.29,normal,1.0,allow,Normal traffic predicted
+1793272525.339,2,486775,32127882,3354531.02,high,1.0,monitor,High-risk confirmation 1/3
+1793272525.411,2,1162726,51637666436,5361767122.09,high,1.0,monitor,High-risk confirmation 1/3
+1793272525.498,1,4,168,8.04,normal,1.0,allow,Normal traffic predicted
+1793272525.575,1,3,126,7.91,normal,1.0,allow,Normal traffic predicted
+1793272525.656,1,486775,32127882,3198283.97,high,1.0,monitor,High-risk confirmation 1/3
+1793272525.738,1,1162723,51637666238,5102106087.26,high,1.0,monitor,High-risk confirmation 1/3
+1793272530.206,1,677934,44745276,2764680.41,high,1.0,monitor,High-risk confirmation 2/3
+1793272530.272,1,1616966,71835797932,4439466241.62,high,1.0,monitor,High-risk confirmation 2/3
+1793272530.35,2,677934,44745276,2523584.81,high,1.0,monitor,High-risk confirmation 2/3
+1793272530.43,2,1616969,71835798130,4031187216.96,high,1.0,monitor,High-risk confirmation 2/3
+1793272535.211,1,892757,58923786,2832837.62,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272535.287,1,2133072,94871621912,4602706178.98,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272535.358,2,892757,58923786,2826803.4,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272537.556,2,2133075,94871622110,4599442372.19,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272542.293,1,917940,60585912,233753.93,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272542.328,1,2192357,97528367122,375105091.4,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272542.365,2,917940,60585912,236100.51,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793272542.399,2,2192360,97528367320,379179886.19,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793273138.143,1,5,490,24.64,normal,1.0,allow,Normal traffic predicted
+1793273138.184,1,5,490,24.43,normal,1.0,allow,Normal traffic predicted
+1793273138.214,1,5,490,24.31,normal,1.0,allow,Normal traffic predicted
+1793273138.261,1,5,490,24.22,normal,1.0,allow,Normal traffic predicted
+1793273138.297,1,5,490,24.08,normal,1.0,allow,Normal traffic predicted
+1793273138.328,1,5,490,23.97,normal,1.0,allow,Normal traffic predicted
+1793273138.361,1,5,490,23.88,normal,1.0,allow,Normal traffic predicted
+1793273138.39,1,5,490,23.78,normal,1.0,allow,Normal traffic predicted
+1793273138.419,1,5,490,23.7,normal,1.0,allow,Normal traffic predicted
+1793273138.45,1,5,490,23.62,normal,1.0,allow,Normal traffic predicted
+1793273138.479,2,5,490,23.53,normal,1.0,allow,Normal traffic predicted
+1793273138.506,2,5,490,23.45,normal,1.0,allow,Normal traffic predicted
+1793273138.536,2,5,490,23.37,normal,1.0,allow,Normal traffic predicted
+1793273138.568,2,5,490,23.29,normal,1.0,allow,Normal traffic predicted
+1793273138.6,2,5,490,23.2,normal,1.0,allow,Normal traffic predicted
+1793273138.636,2,5,490,23.12,normal,1.0,allow,Normal traffic predicted
+1793273138.673,2,5,490,23.02,normal,1.0,allow,Normal traffic predicted
+1793273138.717,2,5,490,22.92,normal,1.0,allow,Normal traffic predicted
+1793273138.754,2,5,490,22.8,normal,1.0,allow,Normal traffic predicted
+1793273138.791,2,5,490,22.7,normal,1.0,allow,Normal traffic predicted
+1793273143.117,1,5,210,16.78,normal,1.0,allow,Normal traffic predicted
+1793273143.147,1,5,210,16.66,normal,1.0,allow,Normal traffic predicted
+1793273143.178,1,6,252,16.56,normal,1.0,allow,Normal traffic predicted
+1793273143.216,1,5,210,16.46,normal,1.0,allow,Normal traffic predicted
+1793273143.245,1,5,210,16.34,normal,1.0,allow,Normal traffic predicted
+1793273143.276,1,5,210,16.25,normal,1.0,allow,Normal traffic predicted
+1793273143.307,1,4,168,16.15,normal,1.0,allow,Normal traffic predicted
+1793273143.336,1,4,168,16.05,normal,1.0,allow,Normal traffic predicted
+1793273143.366,1,4,168,15.97,normal,1.0,allow,Normal traffic predicted
+1793273143.4,1,4,168,15.87,normal,1.0,allow,Normal traffic predicted
+1793273143.432,2,5,210,16.97,normal,1.0,allow,Normal traffic predicted
+1793273143.466,2,6,252,16.86,normal,1.0,allow,Normal traffic predicted
+1793273143.497,2,5,210,16.75,normal,1.0,allow,Normal traffic predicted
+1793273143.529,2,5,210,16.64,normal,1.0,allow,Normal traffic predicted
+1793273143.557,2,5,210,16.54,normal,1.0,allow,Normal traffic predicted
+1793273143.59,2,5,210,16.45,normal,1.0,allow,Normal traffic predicted
+1793273143.62,2,4,168,16.34,normal,1.0,allow,Normal traffic predicted
+1793273143.651,2,4,168,16.25,normal,1.0,allow,Normal traffic predicted
+1793273143.683,2,4,168,16.15,normal,1.0,allow,Normal traffic predicted
+1793273143.716,2,4,168,16.05,normal,1.0,allow,Normal traffic predicted
+1793274156.974,1,7,686,39.21,normal,1.0,allow,Normal traffic predicted
+1793274157.02,1,7,686,38.71,normal,1.0,allow,Normal traffic predicted
+1793274157.055,1,7,686,38.37,normal,1.0,allow,Normal traffic predicted
+1793274157.089,1,7,686,38.11,normal,1.0,allow,Normal traffic predicted
+1793274157.121,1,7,686,37.86,normal,1.0,allow,Normal traffic predicted
+1793274157.155,1,7,686,37.62,normal,1.0,allow,Normal traffic predicted
+1793274157.187,1,7,686,37.38,normal,1.0,allow,Normal traffic predicted
+1793274160.188,1,7,686,37.15,normal,1.0,allow,Normal traffic predicted
+1793274160.357,1,7,686,23.68,normal,1.0,allow,Normal traffic predicted
+1793274160.385,1,7,686,23.21,normal,1.0,allow,Normal traffic predicted
+1793274160.416,2,7,686,23.13,normal,1.0,allow,Normal traffic predicted
+1793274160.45,2,7,686,23.05,normal,1.0,allow,Normal traffic predicted
+1793274160.486,2,7,686,22.96,normal,1.0,allow,Normal traffic predicted
+1793274160.525,2,7,686,22.86,normal,1.0,allow,Normal traffic predicted
+1793274160.561,2,7,686,22.76,normal,1.0,allow,Normal traffic predicted
+1793274160.597,2,7,686,22.66,normal,1.0,allow,Normal traffic predicted
+1793274160.633,2,7,686,22.57,normal,1.0,allow,Normal traffic predicted
+1793274160.667,2,7,686,22.47,normal,1.0,allow,Normal traffic predicted
+1793274160.7,2,7,686,22.39,normal,1.0,allow,Normal traffic predicted
+1793274160.732,2,7,686,22.3,normal,1.0,allow,Normal traffic predicted
+1793274164.912,2,7,294,18.71,normal,1.0,allow,Normal traffic predicted
+1793274164.947,2,8,336,18.55,normal,1.0,allow,Normal traffic predicted
+1793274164.984,2,7,294,18.41,normal,1.0,allow,Normal traffic predicted
+1793274165.018,2,7,294,18.27,normal,1.0,allow,Normal traffic predicted
+1793274165.051,2,7,294,18.13,normal,1.0,allow,Normal traffic predicted
+1793274165.086,2,7,294,18.0,normal,1.0,allow,Normal traffic predicted
+1793274165.118,2,6,252,17.87,normal,1.0,allow,Normal traffic predicted
+1793274165.164,2,6,252,17.75,normal,1.0,allow,Normal traffic predicted
+1793274165.199,2,6,252,17.58,normal,1.0,allow,Normal traffic predicted
+1793274165.232,2,6,252,17.45,normal,1.0,allow,Normal traffic predicted
+1793274165.265,1,7,294,10.09,normal,1.0,allow,Normal traffic predicted
+1793274165.297,1,7,294,10.05,normal,1.0,allow,Normal traffic predicted
+1793274165.328,1,8,336,10.02,normal,1.0,allow,Normal traffic predicted
+1793274165.359,1,7,294,9.98,normal,1.0,allow,Normal traffic predicted
+1793274165.397,1,7,294,9.94,normal,1.0,allow,Normal traffic predicted
+1793274165.43,1,7,294,9.9,normal,1.0,allow,Normal traffic predicted
+1793274165.468,1,6,252,9.86,normal,1.0,allow,Normal traffic predicted
+1793274165.505,1,6,252,9.82,normal,1.0,allow,Normal traffic predicted
+1793274165.54,1,6,252,9.77,normal,1.0,allow,Normal traffic predicted
+1793274165.573,1,6,252,9.73,normal,1.0,allow,Normal traffic predicted
+1793274240.858,2,9,882,39.2,normal,1.0,allow,Normal traffic predicted
+1793274240.893,2,9,882,38.66,normal,1.0,allow,Normal traffic predicted
+1793274240.926,2,9,882,38.4,normal,1.0,allow,Normal traffic predicted
+1793274240.964,2,9,882,38.15,normal,1.0,allow,Normal traffic predicted
+1793274240.999,2,9,882,37.87,normal,1.0,allow,Normal traffic predicted
+1793274241.031,2,9,882,37.62,normal,1.0,allow,Normal traffic predicted
+1793274241.064,2,9,882,37.39,normal,1.0,allow,Normal traffic predicted
+1793274241.096,2,9,882,37.15,normal,1.0,allow,Normal traffic predicted
+1793274241.127,2,9,882,36.93,normal,1.0,allow,Normal traffic predicted
+1793274241.161,2,9,882,36.72,normal,1.0,allow,Normal traffic predicted
+1793274241.207,1,9,882,36.47,normal,1.0,allow,Normal traffic predicted
+1793274241.244,1,9,882,36.17,normal,1.0,allow,Normal traffic predicted
+1793274241.275,1,9,882,35.92,normal,1.0,allow,Normal traffic predicted
+1793274241.307,1,9,882,35.72,normal,1.0,allow,Normal traffic predicted
+1793274241.337,1,9,882,35.52,normal,1.0,allow,Normal traffic predicted
+1793274241.368,1,9,882,35.32,normal,1.0,allow,Normal traffic predicted
+1793274241.401,1,9,882,35.13,normal,1.0,allow,Normal traffic predicted
+1793274241.435,1,9,882,34.92,normal,1.0,allow,Normal traffic predicted
+1793274241.471,1,9,882,34.71,normal,1.0,allow,Normal traffic predicted
+1793274241.508,1,9,882,34.49,normal,1.0,allow,Normal traffic predicted
+1793274245.823,2,9,378,16.8,normal,1.0,allow,Normal traffic predicted
+1793274245.866,2,10,420,16.68,normal,1.0,allow,Normal traffic predicted
+1793274245.9,2,9,378,16.54,normal,1.0,allow,Normal traffic predicted
+1793274245.934,2,9,378,16.43,normal,1.0,allow,Normal traffic predicted
+1793274245.966,2,9,378,16.32,normal,1.0,allow,Normal traffic predicted
+1793274246.0,2,9,378,16.22,normal,1.0,allow,Normal traffic predicted
+1793274246.033,2,8,336,16.12,normal,1.0,allow,Normal traffic predicted
+1793274246.065,2,8,336,16.02,normal,1.0,allow,Normal traffic predicted
+1793274246.099,2,8,336,15.92,normal,1.0,allow,Normal traffic predicted
+1793274246.13,2,8,336,15.82,normal,1.0,allow,Normal traffic predicted
+1793274246.226,1,9,378,16.91,normal,1.0,allow,Normal traffic predicted
+1793274246.271,1,9,378,16.59,normal,1.0,allow,Normal traffic predicted
+1793274246.301,1,10,420,16.44,normal,1.0,allow,Normal traffic predicted
+1793274246.333,1,9,378,16.34,normal,1.0,allow,Normal traffic predicted
+1793274246.363,1,9,378,16.24,normal,1.0,allow,Normal traffic predicted
+1793274246.394,1,9,378,16.15,normal,1.0,allow,Normal traffic predicted
+1793274246.425,1,8,336,16.05,normal,1.0,allow,Normal traffic predicted
+1793274246.457,1,8,336,15.96,normal,1.0,allow,Normal traffic predicted
+1793274246.487,1,8,336,15.86,normal,1.0,allow,Normal traffic predicted
+1793274246.521,1,8,336,15.77,normal,1.0,allow,Normal traffic predicted
+1793365652.33,1,41,3074,580.24,normal,1.0,allow,Normal traffic predicted
+1793365652.357,2,41,3074,559.13,normal,1.0,allow,Normal traffic predicted
+1793365660.238,2,1,42,5.33,normal,1.0,allow,Normal traffic predicted
+1793365660.263,2,1,42,5.31,normal,1.0,allow,Normal traffic predicted
+1793365660.288,2,1,42,5.29,normal,1.0,allow,Normal traffic predicted
+1793365660.313,2,1,42,5.28,normal,1.0,allow,Normal traffic predicted
+1793365660.34,2,1,42,5.26,normal,1.0,allow,Normal traffic predicted
+1793365660.368,2,46,3284,26.22,normal,1.0,allow,Normal traffic predicted
+1793365660.395,1,1,42,5.21,normal,1.0,allow,Normal traffic predicted
+1793365660.422,1,1,42,5.19,normal,1.0,allow,Normal traffic predicted
+1793365660.449,1,1,42,5.17,normal,1.0,allow,Normal traffic predicted
+1793365660.477,1,1,42,5.16,normal,1.0,allow,Normal traffic predicted
+1793365660.502,1,1,42,5.14,normal,1.0,allow,Normal traffic predicted
+1793365660.527,1,46,3284,25.61,normal,1.0,allow,Normal traffic predicted
+1793365665.239,2,50,3564,57.47,normal,1.0,allow,Normal traffic predicted
+1793365665.265,1,50,3564,59.1,normal,1.0,allow,Normal traffic predicted
+1793365680.243,1,52,3704,27.99,normal,1.0,allow,Normal traffic predicted
+1793365680.271,2,52,3704,27.84,normal,1.0,allow,Normal traffic predicted
+1793365713.281,2,53,3774,14.0,normal,1.0,allow,Normal traffic predicted
+1793365713.306,1,53,3774,13.93,normal,1.0,allow,Normal traffic predicted
+1793365718.28,2,56,3984,42.0,normal,1.0,allow,Normal traffic predicted
+1793365718.307,1,56,3984,42.0,normal,1.0,allow,Normal traffic predicted
+1793365780.402,2,57,4054,14.0,normal,1.0,allow,Normal traffic predicted
+1793365780.428,1,57,4054,13.93,normal,1.0,allow,Normal traffic predicted
+1793365785.412,2,59,4194,28.0,normal,1.0,allow,Normal traffic predicted
+1793365785.438,1,59,4194,27.95,normal,1.0,allow,Normal traffic predicted
+1793365790.404,2,60,4264,14.0,normal,1.0,allow,Normal traffic predicted
+1793365790.432,1,60,4264,14.02,normal,1.0,allow,Normal traffic predicted
+1793366648.235,2,40,2988,344.41,normal,1.0,allow,Normal traffic predicted
+1793366648.264,1,40,2988,342.5,normal,1.0,allow,Normal traffic predicted
+1793366653.24,1,1,42,8.44,normal,1.0,allow,Normal traffic predicted
+1793366653.269,1,1,42,8.39,normal,1.0,allow,Normal traffic predicted
+1793366653.294,1,1,42,8.34,normal,1.0,allow,Normal traffic predicted
+1793366653.319,1,1,42,8.3,normal,1.0,allow,Normal traffic predicted
+1793366653.35,1,1,42,8.26,normal,1.0,allow,Normal traffic predicted
+1793366653.397,1,46,3268,54.74,normal,1.0,allow,Normal traffic predicted
+1793366653.516,2,1,42,8.09,normal,1.0,allow,Normal traffic predicted
+1793366653.545,2,1,42,7.91,normal,1.0,allow,Normal traffic predicted
+1793366653.57,2,1,42,7.87,normal,1.0,allow,Normal traffic predicted
+1793366653.598,2,1,42,7.83,normal,1.0,allow,Normal traffic predicted
+1793366653.628,2,1,42,7.79,normal,1.0,allow,Normal traffic predicted
+1793366653.655,2,46,3268,51.65,normal,1.0,allow,Normal traffic predicted
+1793366658.248,2,49,3478,45.84,normal,1.0,allow,Normal traffic predicted
+1793366658.285,1,49,3478,42.88,normal,1.0,allow,Normal traffic predicted
+1793366671.822,1,50,3548,13.99,normal,1.0,allow,Normal traffic predicted
+1793366676.824,1,51,3618,14.01,normal,1.0,allow,Normal traffic predicted
+1793366676.853,2,51,3618,27.99,normal,1.0,allow,Normal traffic predicted
+1793366710.405,2,54,3828,41.96,normal,1.0,allow,Normal traffic predicted
+1793366710.444,1,54,3828,41.71,normal,1.0,allow,Normal traffic predicted
+1793366715.423,1,55,3898,14.1,normal,1.0,allow,Normal traffic predicted
+1793366715.469,2,55,3898,13.87,normal,1.0,allow,Normal traffic predicted
+1793366782.568,1,57,4038,27.99,normal,1.0,allow,Normal traffic predicted
+1793366782.595,2,57,4038,27.83,normal,1.0,allow,Normal traffic predicted
+1793366787.568,2,59,4178,28.16,normal,1.0,allow,Normal traffic predicted
+1793366787.593,1,59,4178,27.84,normal,1.0,allow,Normal traffic predicted
+1793366903.419,1,1376,2080512,416068.49,high,0.88,monitor,High-risk confirmation 1/3
+1793366908.404,1,4948,7481376,1080040.6,high,0.88,monitor,High-risk confirmation 2/3
+1793366908.434,1,2,84,8.43,normal,1.0,allow,Normal traffic predicted
+1793366908.464,1,1,42,8.38,normal,1.0,allow,Normal traffic predicted
+1793366908.499,2,2,84,8.32,normal,1.0,allow,Normal traffic predicted
+1793366908.53,2,1,42,8.27,normal,1.0,allow,Normal traffic predicted
+1793366917.001,1,8520,12882240,628164.76,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793366922.008,1,12090,18280080,1079488.22,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793366922.044,1,60,4248,13.98,normal,1.0,allow,Normal traffic predicted
+1793366922.138,2,60,4248,13.88,normal,1.0,allow,Normal traffic predicted
+1793366927.018,1,15657,23673384,1078576.81,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366927.066,1,61,4318,13.97,normal,1.0,allow,Normal traffic predicted
+1793366927.098,2,61,4318,13.94,normal,1.0,allow,Normal traffic predicted
+1793366932.006,2,62,4388,14.26,normal,1.0,allow,Normal traffic predicted
+1793366932.037,1,19228,29072736,1073253.0,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366932.066,1,62,4388,13.95,normal,1.0,allow,Normal traffic predicted
+1793366937.004,1,22800,34473600,1086663.86,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366937.037,1,63,4458,14.09,normal,1.0,allow,Normal traffic predicted
+1793366937.096,2,63,4458,13.76,normal,1.0,allow,Normal traffic predicted
+1793366942.043,1,26370,39871440,1079234.22,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366947.015,1,29939,45267768,1079334.82,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366955.581,2,3,126,4.92,normal,1.0,allow,Normal traffic predicted
+1793366955.612,2,2,84,4.9,normal,1.0,allow,Normal traffic predicted
+1793366955.646,1,33509,50665608,625166.09,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366955.679,1,3,126,4.87,normal,1.0,allow,Normal traffic predicted
+1793366955.731,1,2,84,4.85,normal,1.0,allow,Normal traffic predicted
+1793366960.606,1,37078,56061936,1092455.59,high,0.935,would_mitigate,Confirmed high-risk; dry-run mode
+1793366965.583,1,40651,61464312,1080461.34,high,0.935,would_mitigate,Confirmed high-risk; dry-run mode
+1793366970.582,1,44221,66862152,1079572.84,high,0.995,would_mitigate,Confirmed high-risk; dry-run mode
+1793366975.582,1,47793,72263016,1080241.15,high,0.995,would_mitigate,Confirmed high-risk; dry-run mode
+1793366980.578,1,51363,77660856,1079533.87,high,0.995,would_mitigate,Confirmed high-risk; dry-run mode
+1793366989.185,1,54932,83057184,629099.42,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366994.156,1,58501,88453512,1079154.04,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366999.155,1,62072,93852864,1079785.44,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793366999.184,1,4,168,8.4,normal,1.0,allow,Normal traffic predicted
+1793366999.212,1,3,126,8.35,normal,1.0,allow,Normal traffic predicted
+1793366999.239,2,4,168,8.31,normal,1.0,allow,Normal traffic predicted
+1793366999.266,2,3,126,8.26,normal,1.0,allow,Normal traffic predicted
+1793367004.164,1,65642,99250704,1079417.09,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367009.163,1,69212,104648544,1079743.46,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367014.163,1,72782,110046384,1079222.39,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367019.166,1,76352,115444224,1079739.81,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367027.901,1,79923,120843576,624760.75,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367032.811,1,83494,126242928,1079795.02,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367037.804,1,87065,131642280,1079879.36,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367042.805,1,90635,137040120,1079342.27,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367042.834,1,5,210,8.4,normal,1.0,allow,Normal traffic predicted
+1793367042.865,1,4,168,8.35,normal,1.0,allow,Normal traffic predicted
+1793367042.899,2,5,210,8.3,normal,1.0,allow,Normal traffic predicted
+1793367042.942,2,4,168,8.24,normal,1.0,allow,Normal traffic predicted
+1793367047.81,1,92704,140168448,625215.49,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793367124.997,2,2,196,19.61,normal,1.0,allow,Normal traffic predicted
+1793367125.052,2,2,196,19.51,normal,1.0,allow,Normal traffic predicted
+1793367125.077,1,92705,140168546,19.3,normal,0.62,allow,Normal traffic predicted
+1793367125.102,1,2,196,19.21,normal,1.0,allow,Normal traffic predicted
+1793367125.127,1,2,196,19.11,normal,1.0,allow,Normal traffic predicted
+1793367125.153,1,2,196,19.02,normal,1.0,allow,Normal traffic predicted
+1793367125.178,1,2,196,18.93,normal,1.0,allow,Normal traffic predicted
+1793367133.558,1,3,126,9.94,normal,1.0,allow,Normal traffic predicted
+1793367133.588,1,3,126,9.9,normal,1.0,allow,Normal traffic predicted
+1793367133.616,1,6,252,4.93,normal,1.0,allow,Normal traffic predicted
+1793367133.65,1,2,84,9.84,normal,1.0,allow,Normal traffic predicted
+1793367133.683,1,5,210,4.9,normal,1.0,allow,Normal traffic predicted
+1793367133.709,1,2,84,9.76,normal,1.0,allow,Normal traffic predicted
+1793367133.739,2,3,126,9.61,normal,1.0,allow,Normal traffic predicted
+1793367133.767,2,6,252,4.79,normal,1.0,allow,Normal traffic predicted
+1793367133.8,2,5,210,4.78,normal,1.0,allow,Normal traffic predicted
+1793367133.831,2,2,84,9.51,normal,1.0,allow,Normal traffic predicted
+1793367138.57,1,92706,140168644,19.59,normal,0.62,allow,Normal traffic predicted
+1793367138.61,1,1,98,19.45,normal,1.0,allow,Normal traffic predicted
+1793367138.642,1,3,294,20.0,normal,1.0,allow,Normal traffic predicted
+1793367138.672,1,3,294,19.87,normal,1.0,allow,Normal traffic predicted
+1793367138.705,1,3,294,19.75,normal,1.0,allow,Normal traffic predicted
+1793367138.734,1,3,294,19.62,normal,1.0,allow,Normal traffic predicted
+1793367138.777,1,3,294,39.0,normal,1.0,allow,Normal traffic predicted
+1793367138.821,1,3,294,38.67,normal,1.0,allow,Normal traffic predicted
+1793367138.866,1,2,196,19.17,normal,1.0,allow,Normal traffic predicted
+1793367138.905,1,2,196,19.0,normal,1.0,allow,Normal traffic predicted
+1793367138.941,2,3,294,19.31,normal,1.0,allow,Normal traffic predicted
+1793367138.983,2,3,294,19.18,normal,1.0,allow,Normal traffic predicted
+1793367139.029,2,2,196,19.02,normal,1.0,allow,Normal traffic predicted
+1793367139.075,2,3,294,37.71,normal,1.0,allow,Normal traffic predicted
+1793367139.122,2,3,294,37.37,normal,1.0,allow,Normal traffic predicted
+1793367139.259,2,2,196,18.52,normal,1.0,allow,Normal traffic predicted
+1793367139.388,2,2,196,18.05,normal,1.0,allow,Normal traffic predicted
+1793367139.454,2,2,196,17.64,normal,1.0,allow,Normal traffic predicted
+1793367139.545,2,2,196,17.43,normal,1.0,allow,Normal traffic predicted
+1793367143.565,2,7,294,9.08,normal,1.0,allow,Normal traffic predicted
+1793367143.602,2,3,126,18.02,normal,1.0,allow,Normal traffic predicted
+1793367143.634,2,3,126,17.88,normal,1.0,allow,Normal traffic predicted
+1793367143.691,2,3,126,17.76,normal,1.0,allow,Normal traffic predicted
+1793367143.819,2,2,84,17.55,normal,1.0,allow,Normal traffic predicted
+1793367143.851,2,6,252,8.55,normal,1.0,allow,Normal traffic predicted
+1793367143.883,2,2,84,16.99,normal,1.0,allow,Normal traffic predicted
+1793367143.913,2,2,84,16.88,normal,1.0,allow,Normal traffic predicted
+1793367143.945,1,7,294,7.92,normal,1.0,allow,Normal traffic predicted
+1793367143.976,1,3,126,15.74,normal,1.0,allow,Normal traffic predicted
+1793367144.007,1,3,126,15.65,normal,1.0,allow,Normal traffic predicted
+1793367144.036,1,6,252,7.78,normal,1.0,allow,Normal traffic predicted
+1793367144.068,1,2,84,15.48,normal,1.0,allow,Normal traffic predicted
+1793367144.102,1,2,84,15.39,normal,1.0,allow,Normal traffic predicted
+1793367148.565,2,3,294,21.22,normal,1.0,allow,Normal traffic predicted
+1793367148.651,2,3,294,20.96,normal,1.0,allow,Normal traffic predicted
+1793367148.681,2,3,294,20.68,normal,1.0,allow,Normal traffic predicted
+1793367148.712,2,3,294,20.55,normal,1.0,allow,Normal traffic predicted
+1793367148.749,1,3,294,21.26,normal,1.0,allow,Normal traffic predicted
+1793367148.78,1,3,294,21.09,normal,1.0,allow,Normal traffic predicted
+1793367210.791,1,64,4528,14.0,normal,1.0,allow,Normal traffic predicted
+1793367210.819,2,64,4528,13.92,normal,1.0,allow,Normal traffic predicted
+1793367230.79,1,66,4668,27.99,normal,1.0,allow,Normal traffic predicted
+1793367230.818,2,66,4668,27.84,normal,1.0,allow,Normal traffic predicted
+1793367249.357,1,67,4738,14.0,normal,1.0,allow,Normal traffic predicted
+1793367249.387,2,67,4738,13.91,normal,1.0,allow,Normal traffic predicted
+1793380085.361,2,42,3160,344.36,normal,1.0,allow,Normal traffic predicted
+1793380085.391,1,42,3160,342.49,normal,1.0,allow,Normal traffic predicted
+1793380090.364,1,1,42,8.45,normal,1.0,allow,Normal traffic predicted
+1793380090.397,1,1,42,8.39,normal,1.0,allow,Normal traffic predicted
+1793380090.432,1,1,42,8.34,normal,1.0,allow,Normal traffic predicted
+1793380090.473,1,1,42,8.28,normal,1.0,allow,Normal traffic predicted
+1793380090.507,1,1,42,8.21,normal,1.0,allow,Normal traffic predicted
+1793380090.538,1,47,3370,40.8,normal,1.0,allow,Normal traffic predicted
+1793380090.567,2,1,42,8.07,normal,1.0,allow,Normal traffic predicted
+1793380090.593,2,1,42,8.03,normal,1.0,allow,Normal traffic predicted
+1793380090.62,2,1,42,7.99,normal,1.0,allow,Normal traffic predicted
+1793380090.65,2,1,42,7.95,normal,1.0,allow,Normal traffic predicted
+1793380090.681,2,1,42,7.9,normal,1.0,allow,Normal traffic predicted
+1793380090.712,2,47,3370,39.27,normal,1.0,allow,Normal traffic predicted
+1793380095.369,2,51,3650,60.19,normal,1.0,allow,Normal traffic predicted
+1793380095.397,1,51,3650,57.59,normal,1.0,allow,Normal traffic predicted
+1793380114.149,1,55,3930,55.99,normal,1.0,allow,Normal traffic predicted
+1793380114.181,2,55,3930,55.68,normal,1.0,allow,Normal traffic predicted
+1793380147.661,2,56,4000,14.0,normal,1.0,allow,Normal traffic predicted
+1793380147.688,1,56,4000,13.92,normal,1.0,allow,Normal traffic predicted
+1793380152.666,2,58,4140,27.99,normal,1.0,allow,Normal traffic predicted
+1793380152.707,1,58,4140,27.98,normal,1.0,allow,Normal traffic predicted
+1793380157.662,1,59,4210,14.09,normal,1.0,allow,Normal traffic predicted
+1793380157.688,2,59,4210,13.92,normal,1.0,allow,Normal traffic predicted
+1793380181.255,1,60,5722,302.4,normal,1.0,allow,Normal traffic predicted
+1793380181.289,2,60,5722,300.41,normal,1.0,allow,Normal traffic predicted
+1793380186.248,1,2,84,8.4,normal,1.0,allow,Normal traffic predicted
+1793380186.278,1,1,42,8.35,normal,1.0,allow,Normal traffic predicted
+1793380186.306,1,3397,5136264,533666.87,high,0.88,monitor,High-risk confirmation 1/3
+1793380186.338,2,2,84,8.32,normal,1.0,allow,Normal traffic predicted
+1793380186.364,2,1,42,8.26,normal,1.0,allow,Normal traffic predicted
+1793380186.389,2,3397,5136264,528236.8,high,0.88,monitor,High-risk confirmation 1/3
+1793380191.258,1,5182,7835184,545961.8,high,0.88,monitor,High-risk confirmation 2/3
+1793380191.293,2,5182,7835184,551492.09,high,0.88,monitor,High-risk confirmation 2/3
+1793380196.251,1,6967,10534104,539598.18,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380196.283,2,6967,10534104,540527.49,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380201.254,1,8754,13236048,540470.91,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380201.281,2,8754,13236048,540118.4,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380206.258,2,10540,15936480,543437.82,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380206.295,1,10540,15936480,536312.18,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380214.886,1,12325,18635400,314313.83,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380214.933,1,61,5792,8.15,normal,1.0,allow,Normal traffic predicted
+1793380214.96,2,12325,18635400,309867.92,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793380215.024,2,61,5792,8.04,normal,1.0,allow,Normal traffic predicted
+1793380219.884,1,14110,21334320,539854.79,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380219.928,2,14110,21334320,545085.45,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380224.88,1,15895,24033240,539712.53,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380224.914,2,15895,24033240,540194.98,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380229.893,1,17679,26730648,539530.48,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380229.936,1,62,5862,13.96,normal,1.0,allow,Normal traffic predicted
+1793380229.968,2,17679,26730648,533520.24,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380229.999,2,62,5862,13.85,normal,1.0,allow,Normal traffic predicted
+1793380234.874,1,19464,29429568,539349.93,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380234.905,1,64,6002,28.1,normal,1.0,allow,Normal traffic predicted
+1793380234.937,2,19464,29429568,543242.21,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793380234.968,2,64,6002,28.18,normal,1.0,allow,Normal traffic predicted
+1793380239.887,1,4,168,25.22,normal,1.0,allow,Normal traffic predicted
+1793380239.917,1,19637,29691144,51910.64,normal,0.83,allow,Normal traffic predicted
+1793380239.945,1,66,6086,16.66,normal,1.0,allow,Normal traffic predicted
+1793380239.975,2,19637,29691144,51892.06,normal,0.805,allow,Normal traffic predicted
+1793380248.51,1,71,6296,24.53,normal,1.0,allow,Normal traffic predicted
+1793380253.513,1,76,6506,42.0,normal,1.0,allow,Normal traffic predicted
+1793380258.53,1,80,6674,33.59,normal,1.0,allow,Normal traffic predicted
+1793380263.507,1,85,6884,41.99,normal,1.0,allow,Normal traffic predicted
+1793380268.505,1,90,7094,42.01,normal,1.0,allow,Normal traffic predicted
+1793380273.514,1,95,7304,42.01,normal,1.0,allow,Normal traffic predicted
+1793380278.507,1,100,7514,42.0,normal,1.0,allow,Normal traffic predicted
+1793380287.155,1,105,7724,24.31,normal,1.0,allow,Normal traffic predicted
+1793380292.149,1,110,7934,41.97,normal,1.0,allow,Normal traffic predicted
+1793380297.147,1,115,8144,42.02,normal,1.0,allow,Normal traffic predicted
+1793380302.156,1,118,8270,25.2,normal,1.0,allow,Normal traffic predicted
+1793380325.82,1,2,196,19.6,normal,1.0,allow,Normal traffic predicted
+1793380325.849,1,2,196,19.47,normal,1.0,allow,Normal traffic predicted
+1793380325.877,1,2,196,19.36,normal,1.0,allow,Normal traffic predicted
+1793380330.812,1,3,126,16.8,normal,1.0,allow,Normal traffic predicted
+1793380330.857,1,2,84,16.72,normal,1.0,allow,Normal traffic predicted
+1793380330.884,1,3,126,24.85,normal,1.0,allow,Normal traffic predicted
+1793380335.821,1,121,8396,25.7,normal,1.0,allow,Normal traffic predicted
+1793380340.821,1,3,294,19.6,normal,1.0,allow,Normal traffic predicted
+1793380340.857,1,3,294,19.47,normal,1.0,allow,Normal traffic predicted
+1793380340.886,1,2,196,19.33,normal,1.0,allow,Normal traffic predicted
+1793380340.914,1,122,8466,13.73,normal,1.0,allow,Normal traffic predicted
+1793380345.817,1,3,126,25.18,normal,1.0,allow,Normal traffic predicted
+1793380350.815,1,2,196,19.71,normal,1.0,allow,Normal traffic predicted
+1793380359.425,1,3,126,14.66,normal,1.0,allow,Normal traffic predicted
+1793380364.445,2,2,196,19.75,normal,1.0,allow,Normal traffic predicted
+1793380369.415,2,4,168,25.21,normal,1.0,allow,Normal traffic predicted
+1793380374.41,2,2,196,19.72,normal,1.0,allow,Normal traffic predicted
+1793380379.413,2,4,168,25.19,normal,1.0,allow,Normal traffic predicted
+1793380384.419,2,2,196,19.7,normal,1.0,allow,Normal traffic predicted
+1793380384.445,2,2,196,19.57,normal,1.0,allow,Normal traffic predicted
+1793380384.469,2,2,196,19.47,normal,1.0,allow,Normal traffic predicted
+1793380393.216,1,123,8536,8.03,normal,1.0,allow,Normal traffic predicted
+1793380393.247,2,5,210,14.27,normal,1.0,allow,Normal traffic predicted
+1793380393.275,2,3,126,9.48,normal,1.0,allow,Normal traffic predicted
+1793380393.301,2,2,84,9.45,normal,1.0,allow,Normal traffic predicted
+1793380393.327,2,66,6142,15.85,normal,1.0,allow,Normal traffic predicted
+1793380398.215,2,2,196,20.05,normal,1.0,allow,Normal traffic predicted
+1793380403.224,2,4,168,25.19,normal,1.0,allow,Normal traffic predicted
+1793380408.215,2,3,294,19.73,normal,1.0,allow,Normal traffic predicted
+1793380408.242,2,3,294,19.63,normal,1.0,allow,Normal traffic predicted
+1793380431.744,2,2,84,4.93,normal,1.0,allow,Normal traffic predicted
+1793380431.772,2,68,6354,24.77,normal,1.0,allow,Normal traffic predicted
+1793380431.804,1,1132,1710270,23.06,normal,0.905,allow,Normal traffic predicted
+1793380431.845,1,1,170,19.73,normal,1.0,allow,Normal traffic predicted
+1793380431.872,1,5,210,4.85,normal,1.0,allow,Normal traffic predicted
+1793380431.901,1,124,8578,4.84,normal,1.0,allow,Normal traffic predicted
+1793380436.746,1,3,126,8.62,normal,1.0,allow,Normal traffic predicted
+1793380436.771,1,6,252,8.57,normal,1.0,allow,Normal traffic predicted
+1793380436.797,2,6,252,8.3,normal,1.0,allow,Normal traffic predicted
+1793380436.824,2,3,126,8.26,normal,1.0,allow,Normal traffic predicted
+1793381638.046,1,19,1550,55.98,normal,1.0,allow,Normal traffic predicted
+1793381638.108,2,19,1550,54.95,normal,1.0,allow,Normal traffic predicted
+1793381643.03,1,1,98,19.59,normal,1.0,allow,Normal traffic predicted
+1793381643.095,1,33,2474,181.93,normal,1.0,allow,Normal traffic predicted
+1793381643.158,2,30,2236,135.84,normal,1.0,allow,Normal traffic predicted
+1793381648.032,1,1,42,8.53,normal,1.0,allow,Normal traffic predicted
+1793381648.085,1,1,42,8.4,normal,1.0,allow,Normal traffic predicted
+1793381648.146,1,35,2558,16.62,normal,1.0,allow,Normal traffic predicted
+1793381648.201,2,1,42,8.32,normal,1.0,allow,Normal traffic predicted
+1793381648.272,2,31,2278,8.23,normal,1.0,allow,Normal traffic predicted
+1793381653.027,1,2,196,19.6,normal,1.0,allow,Normal traffic predicted
+1793381653.09,1,1,98,19.32,normal,1.0,allow,Normal traffic predicted
+1793381653.152,1,1,98,19.58,normal,1.0,allow,Normal traffic predicted
+1793381653.216,1,1,98,19.34,normal,1.0,allow,Normal traffic predicted
+1793381653.287,1,1,98,19.1,normal,1.0,allow,Normal traffic predicted
+1793381653.344,1,1,98,18.84,normal,1.0,allow,Normal traffic predicted
+1793381653.429,1,44,3160,114.49,normal,1.0,allow,Normal traffic predicted
+1793381653.497,2,1,98,18.74,normal,1.0,allow,Normal traffic predicted
+1793381653.562,2,1,98,18.5,normal,1.0,allow,Normal traffic predicted
+1793381653.62,2,44,3216,174.96,normal,1.0,allow,Normal traffic predicted
+1793381658.023,1,1,42,8.63,normal,1.0,allow,Normal traffic predicted
+1793381658.085,1,1,42,8.51,normal,1.0,allow,Normal traffic predicted
+1793381658.143,1,1,42,8.41,normal,1.0,allow,Normal traffic predicted
+1793381658.203,1,50,3496,70.01,normal,1.0,allow,Normal traffic predicted
+1793381662.086,2,1,42,8.8,normal,1.0,allow,Normal traffic predicted
+1793381662.182,2,1,42,4.85,normal,1.0,allow,Normal traffic predicted
+1793381662.252,2,1,42,4.8,normal,1.0,allow,Normal traffic predicted
+1793381662.309,2,1,42,4.76,normal,1.0,allow,Normal traffic predicted
+1793381662.372,2,51,3594,43.21,normal,1.0,allow,Normal traffic predicted
+1793381666.821,2,1,98,22.06,normal,1.0,allow,Normal traffic predicted
+1793381666.897,2,1,98,21.72,normal,1.0,allow,Normal traffic predicted
+1793381667.019,2,1,98,21.36,normal,1.0,allow,Normal traffic predicted
+1793381667.076,2,1,98,20.81,normal,1.0,allow,Normal traffic predicted
+1793381667.148,2,52,3664,14.69,normal,1.0,allow,Normal traffic predicted
+1793381667.216,1,1,98,10.88,normal,1.0,allow,Normal traffic predicted
+1793381667.287,1,1,98,10.8,normal,1.0,allow,Normal traffic predicted
+1793381667.367,1,51,3566,7.66,normal,1.0,allow,Normal traffic predicted
+1793381691.844,1,52,3636,14.01,normal,1.0,allow,Normal traffic predicted
+1793381691.919,2,53,3734,13.77,normal,1.0,allow,Normal traffic predicted
+1793381700.338,2,54,3804,8.32,normal,1.0,allow,Normal traffic predicted
+1793381700.404,1,53,3706,8.16,normal,1.0,allow,Normal traffic predicted
+1793381738.957,1,1616,2440564,283951.42,high,0.88,monitor,High-risk confirmation 1/3
+1793381743.926,2,2,84,8.56,normal,1.0,allow,Normal traffic predicted
+1793381744.01,2,1,42,8.45,normal,1.0,allow,Normal traffic predicted
+1793381744.072,1,3402,5140996,524218.19,high,0.88,monitor,High-risk confirmation 2/3
+1793381744.126,1,2,84,8.21,normal,1.0,allow,Normal traffic predicted
+1793381744.18,1,1,42,8.13,normal,1.0,allow,Normal traffic predicted
+1793381748.93,1,5187,7839916,556210.0,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793381753.93,2,55,3874,14.0,normal,1.0,allow,Normal traffic predicted
+1793381754.029,1,6973,10540348,532882.26,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793381754.101,1,54,3776,13.73,normal,1.0,allow,Normal traffic predicted
+1793381758.935,1,8760,13242292,547458.54,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793381759.001,1,55,3846,14.27,normal,1.0,allow,Normal traffic predicted
+1793381759.073,2,56,3944,13.62,normal,1.0,allow,Normal traffic predicted
+1793381763.933,1,10545,15941212,539998.75,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793381764.15,1,56,3916,14.01,normal,1.0,allow,Normal traffic predicted
+1793381764.221,2,57,4014,13.59,normal,1.0,allow,Normal traffic predicted
+1793381772.674,1,12330,18640132,309017.67,high,0.88,would_mitigate,Confirmed high-risk; dry-run mode
+1793381772.753,1,57,3986,8.01,normal,1.0,allow,Normal traffic predicted
+1793381772.816,2,58,4084,8.14,normal,1.0,allow,Normal traffic predicted
+1793381777.672,1,14115,21339052,539432.97,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793381782.675,1,15900,24037972,539699.28,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793381787.667,1,17760,26850292,562547.64,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793381792.684,1,19016,28749364,379465.76,high,1.0,would_mitigate,Confirmed high-risk; dry-run mode
+1793381792.754,1,4,168,25.11,normal,1.0,allow,Normal traffic predicted
+1793381792.823,1,59,4070,16.51,normal,1.0,allow,Normal traffic predicted
+1793381797.675,1,64,4280,43.27,normal,1.0,allow,Normal traffic predicted
+1793381802.658,1,69,4490,42.03,normal,1.0,allow,Normal traffic predicted
+1793381811.261,1,74,4700,24.45,normal,1.0,allow,Normal traffic predicted
+1793381816.261,1,79,4910,41.97,normal,1.0,allow,Normal traffic predicted
+1793381821.27,1,83,5078,33.61,normal,1.0,allow,Normal traffic predicted
+1793381826.272,1,88,5288,41.95,normal,1.0,allow,Normal traffic predicted
+1793381831.268,1,93,5498,42.0,normal,1.0,allow,Normal traffic predicted
+1793381836.273,1,98,5708,42.03,normal,1.0,allow,Normal traffic predicted
+1793381844.76,1,103,5918,24.71,normal,1.0,allow,Normal traffic predicted
+1793381849.773,1,108,6128,42.03,normal,1.0,allow,Normal traffic predicted
+1793381854.777,1,111,6254,25.17,normal,1.0,allow,Normal traffic predicted
+1793381883.582,1,2,196,11.11,normal,1.0,allow,Normal traffic predicted
+1793381883.648,1,2,196,11.03,normal,1.0,allow,Normal traffic predicted
+1793381883.733,1,2,196,10.95,normal,1.0,allow,Normal traffic predicted
+1793381883.793,2,59,4154,7.75,normal,1.0,allow,Normal traffic predicted
+1793381888.611,1,3,126,16.79,normal,1.0,allow,Normal traffic predicted
+1793381888.708,1,2,84,16.5,normal,1.0,allow,Normal traffic predicted
+1793381888.78,1,1,42,8.1,normal,1.0,allow,Normal traffic predicted
+1793381888.848,1,112,6324,13.87,normal,1.0,allow,Normal traffic predicted
+1793381893.588,1,3,126,17.44,normal,1.0,allow,Normal traffic predicted
+1793381893.642,1,113,6366,8.73,normal,1.0,allow,Normal traffic predicted
+1793381898.586,1,3,294,19.86,normal,1.0,allow,Normal traffic predicted
+1793381898.643,1,3,294,19.61,normal,1.0,allow,Normal traffic predicted
+1793381898.726,1,2,196,19.39,normal,1.0,allow,Normal traffic predicted
+1793381898.784,1,115,6450,16.35,normal,1.0,allow,Normal traffic predicted
+1793381903.609,1,3,126,25.19,normal,1.0,allow,Normal traffic predicted
+1793381903.668,1,116,6520,14.33,normal,1.0,allow,Normal traffic predicted
+1793381908.595,1,2,196,19.94,normal,1.0,allow,Normal traffic predicted
+1793381908.671,2,60,4224,14.21,normal,1.0,allow,Normal traffic predicted
+1793381917.261,1,3,126,14.56,normal,1.0,allow,Normal traffic predicted
+1793381922.255,2,2,196,19.91,normal,1.0,allow,Normal traffic predicted
+1793381927.253,2,4,168,25.21,normal,1.0,allow,Normal traffic predicted
+1793381932.248,2,2,196,19.87,normal,1.0,allow,Normal traffic predicted
+1793381937.417,2,4,168,25.21,normal,1.0,allow,Normal traffic predicted
+1793381942.272,2,2,196,20.55,normal,1.0,allow,Normal traffic predicted
+1793381942.342,2,2,196,20.18,normal,1.0,allow,Normal traffic predicted
+1793381942.407,2,1,98,19.9,normal,1.0,allow,Normal traffic predicted
+1793381947.263,2,5,210,25.21,normal,1.0,allow,Normal traffic predicted
+1793381947.338,2,3,126,16.54,normal,1.0,allow,Normal traffic predicted
+1793381947.413,2,2,84,16.3,normal,1.0,allow,Normal traffic predicted
+1793381955.824,2,2,196,11.75,normal,1.0,allow,Normal traffic predicted
+1793381960.848,2,4,168,25.2,normal,1.0,allow,Normal traffic predicted
+1793381965.863,2,3,294,19.96,normal,1.0,allow,Normal traffic predicted
+1793381965.934,2,3,294,19.55,normal,1.0,allow,Normal traffic predicted
