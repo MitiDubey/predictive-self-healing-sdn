@@ -83,7 +83,7 @@ export default function Dashboard() {
 
   return <div className="app-shell">
     <aside className="sidebar">
-      <div className="brand"><div className="brand-mark">C</div><div><b>CORNERSTONE</b><small>SELF-HEALING SDN</small></div></div>
+      <div className="brand"><img className="brand-logo" src="/cornerstone-logo.png" alt="Cornerstone Self-Healing SDN" /><div><b>CORNERSTONE</b><small>SELF-HEALING SDN</small></div></div>
       <nav>{pages.map((item) => <button className={page === item.name ? "selected" : ""} key={item.name} onClick={() => setPage(item.name)}><span>{item.icon}</span>{item.name}</button>)}</nav>
       <div className="sidebar-status"><span className="status-dot" /> Controller connected<small>Live telemetry · 5s polling</small></div>
       <button className="refresh" onClick={() => window.location.reload()}>↻ Refresh data</button>
