@@ -8,6 +8,11 @@ const allowedPlots = new Set([
   "packet_loss_comparison.png",
   "bandwidth_utilization.png",
   "confusion_matrix.png",
+  "ml_accuracy_comparison.png",
+  "ml_metrics_comparison.png",
+  "recovery_time.png",
+  "traffic_rate_distribution.png",
+  "traffic_rate_over_time.png",
 ]);
 
 export async function GET(
