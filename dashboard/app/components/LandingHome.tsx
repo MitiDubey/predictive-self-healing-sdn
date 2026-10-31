@@ -1,7 +1,11 @@
-"use client";
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NetworkWebCanvas from "./NetworkWebCanvas";
+import {
+  playMissionControlLaunchSound,
+  playTelemetryPulseSound,
+  isSoundMuted,
+  toggleSound
+} from "../utils/soundEffects";
 
 type Page =
   | "Overview"
@@ -30,8 +34,23 @@ export default function LandingHome({
 }: LandingHomeProps) {
   const [isActivating, setIsActivating] = useState(false);
   const [clickCount, setClickCount] = useState(0);
+  const [muted, setMuted] = useState(false);
+
+  useEffect(() => {
+    setMuted(isSoundMuted());
+  }, []);
+
+  const handleToggleSound = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const nextEnabled = toggleSound();
+    setMuted(!nextEnabled);
+    if (nextEnabled) {
+      playTelemetryPulseSound();
+    }
+  };
 
   const handleLaunch = (page: Page = "Overview") => {
+    playMissionControlLaunchSound();
     setIsActivating(true);
     setTimeout(() => {
       onEnterDashboard(page);
@@ -39,6 +58,7 @@ export default function LandingHome({
   };
 
   const handleCanvasClick = () => {
+    playTelemetryPulseSound();
     setClickCount((prev) => prev + 1);
   };
 
@@ -116,16 +136,28 @@ export default function LandingHome({
           <span className="pill-text">OPENFLOW 1.3 // TELEMETRY ACTIVE</span>
         </div>
 
-        <button
-          className="landing-enter-cta-small"
-          onClick={() => handleLaunch("Overview")}
-          id="enter-dashboard-nav-btn"
-        >
-          <span>Launch Dashboard</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M7 17L17 7M17 7H7M17 7V17" />
-          </svg>
-        </button>
+        <div className="landing-header-actions">
+          <button
+            className="landing-sound-btn"
+            onClick={handleToggleSound}
+            title={muted ? "Unmute Sound FX" : "Mute Sound FX"}
+            id="landing-audio-toggle-btn"
+          >
+            <span>{muted ? "🔇" : "🔊"}</span>
+            <span className="sound-label">{muted ? "MUTED" : "SOUND ON"}</span>
+          </button>
+
+          <button
+            className="landing-enter-cta-small"
+            onClick={() => handleLaunch("Overview")}
+            id="enter-dashboard-nav-btn"
+          >
+            <span>Launch Dashboard</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </button>
+        </div>
       </header>
 
       {/* Main Hero Container */}
