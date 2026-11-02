@@ -1,0 +1,20 @@
+[Unit]
+Description=Cornerstone Next.js Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/cornerstone/dashboard
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=CORNERSTONE_ROOT=/opt/cornerstone
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=5
+StandardOutput=append:/opt/cornerstone/logs/dashboard.log
+StandardError=append:/opt/cornerstone/logs/dashboard_error.log
+
+[Install]
+WantedBy=multi-user.target
+

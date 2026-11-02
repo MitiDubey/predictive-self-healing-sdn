@@ -1,0 +1,19 @@
+[Unit]
+Description=Cornerstone SDN OS-Ken Controller
+After=network.target openvswitch-switch.service
+Wants=openvswitch-switch.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cornerstone
+ExecStart=/opt/cornerstone/.venv/bin/python /opt/cornerstone/controller/run_controller.py
+Restart=always
+RestartSec=5
+KillMode=process
+StandardOutput=append:/opt/cornerstone/logs/controller.log
+StandardError=append:/opt/cornerstone/logs/controller_error.log
+
+[Install]
+WantedBy=multi-user.target
+

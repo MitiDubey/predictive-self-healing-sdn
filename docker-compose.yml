@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  controller:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.controller
+    container_name: cornerstone-controller
+    restart: unless-stopped
+    ports:
+      - "6653:6653"
+      - "6633:6633"
+    volumes:
+      - ./logs:/app/logs
+      - ./results:/app/results
+      - ./traffic_data.csv:/app/traffic_data.csv
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.dashboard
+    container_name: cornerstone-dashboard
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./logs:/app/project/logs:ro
+      - ./results:/app/project/results:ro
+      - ./traffic_data.csv:/app/project/traffic_data.csv:ro
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - CORNERSTONE_ROOT=/app/project
+    depends_on:
+      - controller
+

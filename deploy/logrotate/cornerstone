@@ -1,0 +1,12 @@
+/opt/cornerstone/logs/*.log
+/opt/cornerstone/logs/*.csv
+/opt/cornerstone/traffic_data.csv {
+    daily
+    missingok
+    rotate 14
+    compress
+    delaycompress
+    notifempty
+    copytruncate
+}
+

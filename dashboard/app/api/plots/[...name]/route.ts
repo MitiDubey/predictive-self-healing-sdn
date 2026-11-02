@@ -15,6 +15,12 @@ const allowedPlots = new Set([
   "traffic_rate_over_time.png",
 ]);
 
+const root =
+  process.env.CORNERSTONE_ROOT ||
+  (path.basename(process.cwd()) === "dashboard"
+    ? path.resolve(process.cwd(), "..")
+    : process.cwd());
+
 export async function GET(
   _request: Request,
   { params }: { params: { name: string[] } },
@@ -26,7 +32,7 @@ export async function GET(
 
   try {
     const image = await readFile(
-      path.resolve(process.cwd(), "..", "results", "plots", filename),
+      path.resolve(root, "results", "plots", filename),
     );
     return new NextResponse(image, {
       headers: {

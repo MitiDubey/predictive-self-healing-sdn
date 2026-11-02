@@ -2,7 +2,11 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { NextResponse } from "next/server";
 
-const root = path.resolve(process.cwd(), "..");
+const root =
+  process.env.CORNERSTONE_ROOT ||
+  (path.basename(process.cwd()) === "dashboard"
+    ? path.resolve(process.cwd(), "..")
+    : process.cwd());
 
 type Row = Record<string, string>;
 
