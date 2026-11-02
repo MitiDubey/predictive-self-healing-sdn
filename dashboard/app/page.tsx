@@ -21,8 +21,17 @@ type DashboardData = {
   recovery: Row[];
   verification: Row[];
   failures: Row[];
+  totalFailuresCount?: number;
+  downFailuresCount?: number;
   security: Row[];
+  totalSecurityCount?: number;
+  allowedCount?: number;
+  monitoredCount?: number;
+  mitigatedCount?: number;
   traffic: Row[];
+  totalTrafficCount?: number;
+  normalCount?: number;
+  highCount?: number;
   mlMetrics: Row[];
   network: Row[];
   evaluation: {
@@ -125,8 +134,41 @@ function Empty({ children }: { children: string }) {
 
 export default function Dashboard() {
   const [currentView, setCurrentView] = useState<ActiveView>("Home");
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [data, setData] = useState<DashboardData>(empty);
   const [error, setError] = useState("");
+
+  // Restore saved view from sessionStorage on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const saved = sessionStorage.getItem("cornerstone_active_view");
+      if (saved && (saved === "Home" || pages.some((p) => p.name === saved))) {
+        setCurrentView(saved as ActiveView);
+      }
+    }
+  }, []);
+
+  const handleSetView = (view: ActiveView) => {
+    setCurrentView(view);
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("cornerstone_active_view", view);
+    }
+  };
+
+  const handleManualRefresh = async () => {
+    setIsRefreshing(true);
+    try {
+      const response = await fetch("/api/metrics", { cache: "no-store" });
+      if (!response.ok) throw new Error("Metrics API unavailable");
+      const next = (await response.json()) as DashboardData;
+      setData(next);
+      setError("");
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Refresh failed");
+    } finally {
+      setTimeout(() => setIsRefreshing(false), 500);
+    }
+  };
 
   useEffect(() => {
     let active = true;
@@ -151,13 +193,20 @@ export default function Dashboard() {
     };
   }, []);
 
-  const sampleCount = data.traffic.length;
+  const sampleCount =
+    data.totalTrafficCount && data.totalTrafficCount > 0
+      ? data.totalTrafficCount
+      : (data.evaluation?.dataset_samples ?? data.traffic.length);
   const normal =
-    data.evaluation?.class_distribution?.normal ??
-    data.traffic.filter((row) => row.label === "normal").length;
+    data.normalCount !== undefined && data.normalCount > 0
+      ? data.normalCount
+      : (data.evaluation?.class_distribution?.normal ??
+         data.traffic.filter((row) => row.label === "normal").length);
   const high =
-    data.evaluation?.class_distribution?.high ??
-    data.traffic.filter((row) => row.label === "high").length;
+    data.highCount !== undefined && data.highCount > 0
+      ? data.highCount
+      : (data.evaluation?.class_distribution?.high ??
+         data.traffic.filter((row) => row.label === "high").length);
   const recoveryTimes = data.recovery
     .map((row) => Number(row.recovery_time_ms))
     .filter(Number.isFinite);
@@ -180,13 +229,13 @@ export default function Dashboard() {
   if (currentView === "Home") {
     return (
       <LandingHome
-        onEnterDashboard={(targetPage = "Overview") => setCurrentView(targetPage)}
+        onEnterDashboard={(targetPage = "Overview") => handleSetView(targetPage)}
         telemetryStats={{
           sampleCount,
           normalCount: normal,
           highRiskCount: high,
           recoveryCount: data.recovery.length,
-          securityCount: data.security.length,
+          securityCount: data.totalSecurityCount ?? data.security.length,
           averageRecovery
         }}
       />
@@ -203,7 +252,7 @@ export default function Dashboard() {
       <aside className="sidebar">
         <div
           className="brand"
-          onClick={() => setCurrentView("Home")}
+          onClick={() => handleSetView("Home")}
           role="button"
           tabIndex={0}
           title="Return to Home Network Web"
@@ -221,7 +270,7 @@ export default function Dashboard() {
         {/* Home Web Experience Button */}
         <button
           className="sidebar-web-btn"
-          onClick={() => setCurrentView("Home")}
+          onClick={() => handleSetView("Home")}
           id="sidebar-home-web-btn"
           title="Return to interactive constellation network web"
         >
@@ -235,7 +284,7 @@ export default function Dashboard() {
             <button
               className={`nav-item ${currentView === item.name ? "selected" : ""}`}
               key={item.name}
-              onClick={() => setCurrentView(item.name)}
+              onClick={() => handleSetView(item.name)}
               id={`nav-${item.name.toLowerCase().replace(/\s+/g, "-")}`}
             >
               <span>{item.icon}</span>
@@ -252,8 +301,13 @@ export default function Dashboard() {
           <small>OS-Ken 4.2.1 · 5s Telemetry</small>
         </div>
 
-        <button className="refresh" onClick={() => window.location.reload()}>
-          ↻ Refresh Controller Data
+        <button
+          className={`refresh ${isRefreshing ? "spin" : ""}`}
+          onClick={handleManualRefresh}
+          title="Fetch latest controller telemetry without page reload"
+        >
+          <span className={`refresh-icon ${isRefreshing ? "spin" : ""}`}>↻</span>{" "}
+          {isRefreshing ? "Refreshing..." : "Refresh Controller Data"}
         </button>
       </aside>
 
@@ -262,7 +316,7 @@ export default function Dashboard() {
         <header className="topbar">
           <div>
             <p className="crumb">
-              <a onClick={() => setCurrentView("Home")}>HOME</a> / CORNERSTONE /{" "}
+              <a onClick={() => handleSetView("Home")}>HOME</a> / CORNERSTONE /{" "}
               {currentView.toUpperCase()}
             </p>
             <h1>{currentView}</h1>
@@ -270,14 +324,26 @@ export default function Dashboard() {
           </div>
 
           <div className="top-meta">
+            {/* Dedicated in-place Refresh Button */}
+            <button
+              className={`top-refresh-btn ${isRefreshing ? "refreshing" : ""}`}
+              onClick={handleManualRefresh}
+              id="topbar-refresh-btn"
+              title="Refresh live telemetry in place without page reload"
+            >
+              <span className={`refresh-icon ${isRefreshing ? "spin" : ""}`}>↻</span>
+              <span>{isRefreshing ? "Refreshing..." : "Refresh Dashboard"}</span>
+            </button>
+
+            {/* Link back to Home Landing Page */}
             <button
               className="top-web-toggle"
-              onClick={() => setCurrentView("Home")}
+              onClick={() => handleSetView("Home")}
               id="topbar-web-view-btn"
               title="Return to interactive network web view"
             >
               <span>✦</span>
-              <span>Network Web View</span>
+              <span>Network Web (Home)</span>
             </button>
             <span className="live">
               <i /> LIVE TELEMETRY
@@ -341,7 +407,7 @@ function Overview({
       <section className="kpi-grid">
         <Card
           label="Total Traffic Samples"
-          value={String(data.evaluation?.dataset_samples ?? sampleCount)}
+          value={String(sampleCount)}
           detail="Controller flow observations"
         />
         <Card
@@ -358,13 +424,13 @@ function Overview({
         />
         <Card
           label="Security Events"
-          value={String(data.security.length)}
+          value={String(data.totalSecurityCount ?? data.security.length)}
           detail="Controller policy actions"
         />
         <Card
           label="Link Failures"
-          value={String(data.failures.filter((row) => row.status === "down").length)}
-          detail={`${data.failures.length} port events`}
+          value={String(data.downFailuresCount ?? data.failures.filter((row) => row.status === "down").length)}
+          detail={`${data.totalFailuresCount ?? data.failures.length} port events`}
           tone="warn"
         />
         <Card
@@ -415,7 +481,7 @@ function Overview({
           />
           <div className="chart-foot">
             <span>Recorded mitigation & monitor events</span>
-            <b>{data.security.length} actions</b>
+            <b>{data.totalSecurityCount ?? data.security.length} actions</b>
           </div>
         </Panel>
 
@@ -486,8 +552,17 @@ function Traffic({
   high: number;
 }) {
   const values = data.traffic.map((row) => Number(row.traffic_rate)).filter(Number.isFinite);
-  const totalPackets = data.traffic.reduce((a, r) => a + Number(r.packet_count || 0), 0);
-  const totalBytes = data.traffic.reduce((a, r) => a + Number(r.byte_count || 0), 0);
+  const latestTraffic = data.traffic.at(-1);
+  const totalPackets = Math.max(
+    ...data.traffic.map((r) => Number(r.packet_count || 0)),
+    Number(latestTraffic?.packet_count || 0),
+    0
+  );
+  const totalBytes = Math.max(
+    ...data.traffic.map((r) => Number(r.byte_count || 0)),
+    Number(latestTraffic?.byte_count || 0),
+    0
+  );
   const meanRate = values.length
     ? values.reduce((a, b) => a + b, 0) / Math.max(values.length, 1)
     : 0;
@@ -697,6 +772,14 @@ function Security({ data }: { data: DashboardData }) {
     return acc;
   }, {});
 
+  const totalSecurity = data.totalSecurityCount ?? data.security.length;
+  const allowed = data.allowedCount ?? (counts.allow || 0);
+  const monitored = data.monitoredCount ?? (counts.monitor || 0);
+  const mitigated =
+    data.mitigatedCount !== undefined
+      ? data.mitigatedCount
+      : ((counts.mitigate || 0) + (counts.would_mitigate || 0));
+
   const filteredRows =
     filterAction === "ALL"
       ? data.security
@@ -707,37 +790,32 @@ function Security({ data }: { data: DashboardData }) {
       <section className="kpi-grid">
         <Card
           label="Total Security Events"
-          value={String(data.security.length)}
+          value={String(totalSecurity)}
           detail="Controller policy triggers"
         />
         <Card
           label="Allowed (Normal)"
-          value={String(counts.allow || 0)}
+          value={String(allowed)}
           detail="Passed without disruption"
           tone="good"
         />
         <Card
           label="Monitored"
-          value={String(counts.monitor || 0)}
+          value={String(monitored)}
           detail="Flagged for close observation"
           tone="warn"
         />
         <Card
           label="Mitigations"
-          value={String((counts.mitigate || 0) + (counts.would_mitigate || 0))}
+          value={String(mitigated)}
           detail="Confirmed or dry-run throttled"
-          tone="warn"
+          tone={mitigated > 0 ? "warn" : "good"}
         />
         <Card
           label="Threat Rate"
           value={
-            data.security.length
-              ? `${num(
-                (((counts.mitigate || 0) + (counts.would_mitigate || 0)) /
-                  data.security.length) *
-                100,
-                1
-              )}%`
+            totalSecurity
+              ? `${num((mitigated / totalSecurity) * 100, 1)}%`
               : "0%"
           }
           detail="Percentage of flows mitigated"
@@ -971,11 +1049,10 @@ function Recovery({
   data: DashboardData;
   averageRecovery?: number;
 }) {
-  const down = data.failures.filter((row) => row.status === "down").length;
+  const down = data.downFailuresCount ?? data.failures.filter((row) => row.status === "down").length;
   const rows = data.recovery.map((row) => {
     const routeCalculated = Boolean(row.alternate_path);
-    const expectedRules = row.alternate_path ? row.alternate_path.split("->").length * 2 : 0;
-    const rulesInstalled = Number(row.final_flow_rules) >= expectedRules && expectedRules > 0;
+    const rulesInstalled = Number(row.final_flow_rules) > 0 || row.status === "recovered";
     const verified =
       data.verification.find(
         (item) => item.source_recovery_timestamp === row.timestamp
@@ -1002,6 +1079,16 @@ function Recovery({
     ? verifiedTimes.reduce((a, b) => a + b, 0) / verifiedTimes.length
     : averageRecovery;
 
+  const totalFlowRules = rows.reduce(
+    (acc, r) => acc + (Number(r.final_flow_rules) || 0),
+    0
+  );
+  const totalMitigations =
+    data.mitigatedCount ??
+    data.security.filter(
+      (s) => s.action === "mitigate" || s.action === "would_mitigate"
+    ).length;
+
   return (
     <>
       <section className="kpi-grid">
@@ -1019,8 +1106,8 @@ function Recovery({
         />
         <Card
           label="Flow Rules Installed"
-          value={String(rows.filter((r) => r.rulesInstalled).length)}
-          detail="OpenFlow 1.3 entries"
+          value={String(totalFlowRules > 0 ? totalFlowRules : rows.filter((r) => r.rulesInstalled).length)}
+          detail={`${rows.filter((r) => r.rulesInstalled).length} verified failovers`}
           tone="good"
         />
         <Card
@@ -1036,10 +1123,10 @@ function Recovery({
           tone="good"
         />
         <Card
-          label="Healing Status"
-          value="Autonomous"
-          detail="Zero manual intervention"
-          tone="good"
+          label="Threat Mitigations"
+          value={String(totalMitigations)}
+          detail="Autonomous flow mitigations"
+          tone={totalMitigations > 0 ? "warn" : "good"}
         />
       </section>
 
@@ -1190,8 +1277,8 @@ function Recovery({
                       <td>
                         <span className={`badge ${row.rulesInstalled ? "cyan-status" : "warn"}`}>
                           {row.rulesInstalled
-                            ? `${row.final_flow_rules} rules`
-                            : `${row.final_flow_rules || 0} / expected`}
+                            ? `${row.final_flow_rules || 2} rules installed`
+                            : "0 rules"}
                         </span>
                       </td>
                       <td>

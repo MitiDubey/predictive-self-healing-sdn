@@ -2,6 +2,9 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const root =
   process.env.CORNERSTONE_ROOT ||
   (path.basename(process.cwd()) === "dashboard"
@@ -49,17 +52,40 @@ export async function GET() {
       readJson("results/final_evaluation.json")
     ]);
 
+  const normalCount = traffic.filter((r) => r.label === "normal").length;
+  const highCount = traffic.filter((r) => r.label === "high").length;
+  const totalSecurityCount = security.length;
+  const allowedCount = security.filter((s) => s.action === "allow").length;
+  const monitoredCount = security.filter((s) => s.action === "monitor").length;
+  const mitigatedCount = security.filter(
+    (s) => s.action === "mitigate" || s.action === "would_mitigate"
+  ).length;
+  const downFailuresCount = failures.filter((f) => f.status === "down").length;
+
   return NextResponse.json({
     updatedAt: new Date().toISOString(),
     recovery,
     verification,
-    failures: failures.slice(-20).reverse(),
-    security: security.slice(-20).reverse(),
-    traffic: traffic.slice(-30),
+    failures: failures.slice(-40).reverse(),
+    totalFailuresCount: failures.length,
+    downFailuresCount,
+    security: security.slice(-100).reverse(),
+    totalSecurityCount,
+    allowedCount,
+    monitoredCount,
+    mitigatedCount,
+    totalTrafficCount: traffic.length,
+    normalCount,
+    highCount,
+    traffic: traffic.slice(-40),
     mlMetrics,
     network,
     evaluation
   }, {
-    headers: { "Cache-Control": "no-store" }
+    headers: {
+      "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+      "Pragma": "no-cache",
+      "Expires": "0"
+    }
   });
 }

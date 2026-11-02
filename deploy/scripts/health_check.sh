@@ -13,10 +13,23 @@ echo "========================================================"
 FAILED=0
 
 # Check 1: Open vSwitch
+OVS_ACTIVE=false
+OVS_MSG=""
+
 if command -v ovs-vsctl >/dev/null 2>&1 && ovs-vsctl show >/dev/null 2>&1; then
-    echo "  [PASS] Open vSwitch service is active."
+    OVS_ACTIVE=true
+elif command -v ovs-vsctl >/dev/null 2>&1 && sudo -n ovs-vsctl show >/dev/null 2>&1; then
+    OVS_ACTIVE=true
+elif pgrep -f "ovs-vswitchd" >/dev/null 2>&1 || pgrep -f "ovsdb-server" >/dev/null 2>&1; then
+    OVS_ACTIVE=true
+    OVS_MSG=" (daemons running; run with sudo for ovs-vsctl socket access)"
+fi
+
+if [[ "$OVS_ACTIVE" == "true" ]]; then
+    echo "  [PASS] Open vSwitch service is active${OVS_MSG}."
 else
     echo "  [WARN] Open vSwitch service is not responding or not running."
+    echo "         Run: sudo systemctl restart openvswitch-switch (or: sudo service openvswitch-switch start)"
 fi
 
 # Check 2: Controller Process & OpenFlow Port

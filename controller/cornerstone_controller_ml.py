@@ -3,7 +3,8 @@ import os
 import csv
 import time
 from os_ken.controller import ofp_event
-from os_ken.controller.handler import MAIN_DISPATCHER, set_ev_cls
+from os_ken.controller.handler import CONFIG_DISPATCHER, MAIN_DISPATCHER, set_ev_cls
+from os_ken.lib.packet import packet, ethernet
 from controller.decision_engine import DecisionEngine
 from controller.cornerstone_controller_day6 import CornerstoneController as Day6Controller
 from ml.predict import predict
@@ -45,15 +46,16 @@ class CornerstoneController(Day6Controller):
         super(CornerstoneController, self).__init__(*args, **kwargs)
         self.failure_detector = FailureDetector()
         self.path_manager = PathManager()
+        self.active_path = [1, 2, 4]
         self.link_port_states = {}
         self.recovery_log_file = "logs/recovery_events.csv"
         self.recovery_started_at = {}
         self.pending_recoveries = {}
         self._initialise_recovery_log()
-        # Day 12: decision engine in dry-run mode
+        # Decision engine: 1 confirmation needed for responsive mitigation
         self.decision_engine = DecisionEngine(
             confidence_threshold=self.ML_CONFIDENCE_THRESHOLD,
-            required_confirmations=3,
+            required_confirmations=1,
             dry_run=True
         )
 
@@ -90,6 +92,92 @@ class CornerstoneController(Day6Controller):
             self.model_available = False
             print(f"ML model unavailable; threshold fallback enabled: {exc}")
 
+    @set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)
+    def switch_features_handler(self, ev):
+        super(CornerstoneController, self).switch_features_handler(ev)
+        datapath = ev.msg.datapath
+        self.datapaths[datapath.id] = datapath
+        self._check_and_install_initial_flows()
+
+    def _check_and_install_initial_flows(self):
+        """Proactively install primary path flows as soon as active path switches are connected."""
+        if all(sw in self.datapaths for sw in self.active_path):
+            self._install_path_flows(self.active_path)
+
+    @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
+    def packet_in_handler(self, ev):
+        msg = ev.msg
+        datapath = msg.datapath
+        parser = datapath.ofproto_parser
+        ofproto = datapath.ofproto
+
+        dpid = datapath.id
+        in_port = msg.match["in_port"]
+
+        pkt = packet.Packet(msg.data)
+        eth = pkt.get_protocol(ethernet.ethernet)
+        if eth is None:
+            return
+
+        src = eth.src
+        dst = eth.dst
+
+        # Break loops across redundant topologies:
+        # Transit switches (s2, s3) drop packets if they are not in the active forwarding path
+        if dpid in (2, 3) and dpid not in self.active_path:
+            return
+
+        self.mac_to_port.setdefault(dpid, {})
+        self.mac_to_port[dpid][src] = in_port
+
+        out_port = self.mac_to_port[dpid].get(dst)
+
+        actions = []
+        if out_port is not None:
+            actions = [parser.OFPActionOutput(out_port)]
+        else:
+            # Loop-free flood: flood exclusively along active path tree to prevent broadcast storms
+            active_transit = 3 if (2 in self.active_path) else 4
+            if dpid == 1:
+                target_ports = [p for p in (1, 2, active_transit) if p != in_port]
+            elif dpid == 4:
+                target_ports = [p for p in (1, 2, active_transit) if p != in_port]
+            elif dpid in (2, 3):
+                target_ports = [p for p in (1, 2) if p != in_port]
+            else:
+                target_ports = []
+            actions = [parser.OFPActionOutput(p) for p in target_ports]
+
+        if out_port is not None:
+            match = parser.OFPMatch(
+                in_port=in_port,
+                eth_dst=dst,
+                eth_src=src
+            )
+            instructions = [
+                parser.OFPInstructionActions(
+                    ofproto.OFPIT_APPLY_ACTIONS,
+                    actions
+                )
+            ]
+            flow = parser.OFPFlowMod(
+                datapath=datapath,
+                priority=10,
+                match=match,
+                instructions=instructions,
+                idle_timeout=30
+            )
+            datapath.send_msg(flow)
+
+        out = parser.OFPPacketOut(
+            datapath=datapath,
+            buffer_id=msg.buffer_id,
+            in_port=in_port,
+            actions=actions,
+            data=msg.data
+        )
+        datapath.send_msg(out)
+
     @set_ev_cls(
         ofp_event.EventOFPPortStatus,
         MAIN_DISPATCHER
@@ -109,11 +197,13 @@ class CornerstoneController(Day6Controller):
             edge = tuple(sorted((datapath.id, peer[0])))
 
             if status in ("down", "removed"):
-                before_path = self.path_manager.shortest_path(1, 4)
+                before_path = list(self.active_path)
                 self.link_port_states[port_key] = False
                 self.path_manager.remove_link(*edge)
 
                 alternate = self.path_manager.shortest_path(1, 4)
+                if alternate:
+                    self.active_path = alternate
                 detected_at = time.time()
                 self.recovery_started_at[edge] = detected_at
                 recovery = self._reroute_affected_flows(
@@ -148,13 +238,17 @@ class CornerstoneController(Day6Controller):
                 if peer_up:
                     self.path_manager.add_link(*edge)
 
-                alternate = self.path_manager.shortest_path(1, 4)
+                restored = self.path_manager.shortest_path(1, 4)
+                if restored and restored != self.active_path:
+                    print(f"PATH RESTORED: Switching back to {restored}")
+                    self.active_path = restored
+                    self._install_path_flows(self.active_path)
 
                 print(
                     f"PORT UP | switch={datapath.id} | "
                     f"port={msg.desc.port_no} | "
                     f"link={edge} | "
-                    f"path={alternate}"
+                    f"path={restored}"
                 )
 
         else:
@@ -165,7 +259,8 @@ class CornerstoneController(Day6Controller):
             )
 
     def _on_datapaths_changed(self):
-        """Retry recovery after a switch connects to the controller."""
+        """Retry recovery and verify proactive flows when switches change."""
+        self._check_and_install_initial_flows()
         for failed_link, recovery in list(self.pending_recoveries.items()):
             result = self._reroute_affected_flows(
                 failed_link=failed_link,
@@ -192,7 +287,17 @@ class CornerstoneController(Day6Controller):
             previous_bytes, previous_time = previous
             byte_difference = current_bytes - previous_bytes
             time_difference = now - previous_time
-            if byte_difference <= 0 or time_difference <= 0:
+            if time_difference <= 0:
+                continue
+
+            if byte_difference <= 0:
+                # Emit idle heartbeat for monitored forward flow so dashboard streams live updates
+                try:
+                    m = dict(stat.match.items())
+                except Exception:
+                    m = {}
+                if datapath.id == 1 and stat.priority == 100 and m.get("ipv4_dst") == "10.0.0.4":
+                    self._write_measurement(datapath.id, current_packets, current_bytes, 0.0, "normal")
                 continue
 
             traffic_rate = byte_difference / time_difference
@@ -409,6 +514,18 @@ class CornerstoneController(Day6Controller):
                     datapath=datapath,
                     priority=100,
                     match=match,
+                    instructions=instructions,
+                ))
+
+                # Install bidirectional ARP forwarding rule across the same path
+                arp_match = parser.OFPMatch(
+                    eth_type=0x0806,
+                    arp_tpa=dst_ip,
+                )
+                datapath.send_msg(parser.OFPFlowMod(
+                    datapath=datapath,
+                    priority=100,
+                    match=arp_match,
                     instructions=instructions,
                 ))
                 installed += 1

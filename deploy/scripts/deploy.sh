@@ -93,6 +93,9 @@ echo "[+] Step 7: Installing systemd service units..."
 cp "${INSTALL_DIR}/deploy/systemd/cornerstone-controller.service" /etc/systemd/system/
 cp "${INSTALL_DIR}/deploy/systemd/cornerstone-dashboard.service" /etc/systemd/system/
 
+# Clean any stale Mininet virtual interfaces
+mn -c >/dev/null 2>&1 || true
+
 systemctl daemon-reload
 systemctl enable cornerstone-controller
 systemctl enable cornerstone-dashboard

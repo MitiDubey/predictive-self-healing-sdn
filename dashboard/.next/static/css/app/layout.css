@@ -1003,6 +1003,47 @@ html, body {
   box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
 }
 
+.top-refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 240, 255, 0.14);
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  color: var(--cyan);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.top-refresh-btn:hover {
+  background: var(--cyan);
+  color: #030712;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.45);
+}
+
+.top-refresh-btn.refreshing {
+  opacity: 0.85;
+  cursor: wait;
+}
+
+.refresh-icon.spin,
+.refresh.spin {
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .live {
   display: inline-flex;
   align-items: center;
